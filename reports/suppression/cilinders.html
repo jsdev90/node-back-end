@@ -1,0 +1,50 @@
+<section>
+  <table class="table tabla-rich table-condensed blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Cylinder Information <small> — Annual testing frequency</small>
+        </th>
+      </tr>
+      <tr>
+        <td style="width: 25%">Location</td>
+        <td style="width: 20%">Manufacturer</td>
+        <td style="width: 20%">Model</td>
+        <td class="short-column">Size</td>
+        <td class="short-column">Weight</td>
+        <td class="short-column">Pressure</td>
+        <td class="short-column">Pass/Fail</td>
+        <td>Notes</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="cylinder in data.cylinders track by $index">
+        <td>
+          <span>{{$index + 1}}. {{cylinder.location}}</span>
+        </td>
+        <td>
+          <span ng-bind="cylinder.make"></span>
+        </td>
+        <td>
+          <span ng-bind="cylinder.model"></span>
+        </td>
+        <td>
+          <span ng-bind="cylinder.size"></span>
+        </td>
+        <td>
+          <span ng-bind="cylinder.weight"></span>
+        </td>
+        <td>
+          <span ng-bind="cylinder.pressure"></span>
+        </td>
+        <td>
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="cylinder.passedInspection === 'Yes'"></i>
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="cylinder.passedInspection === 'No'"></i>
+        </td>
+        <td>
+          <span></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

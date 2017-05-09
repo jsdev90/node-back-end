@@ -1,0 +1,104 @@
+<section>
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          System Function Summary <small> — Annual testing frequency</small>
+        </th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          <span>Yes</span>
+        </th>
+        <th class="short-column">
+          <span>No</span>
+        </th>
+        <th class="short-column">
+          <span>N/A</span>
+        </th>
+        <th>
+          <span></span>
+        </th>
+        <th style="width:35%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest1 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest1 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest1 === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Loss of AC power to the alarm panel is detected?</span>
+        </td>
+        <td><span ng-bind="data.inspecQuest1Note"></span></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest2 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest2 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest2 === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Loss of secondary power to the alarm panel is detected?</span>
+        </td>
+        <td><span ng-bind="data.inspecQuest2Note"></span></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest3 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest3 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest3 === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Electrical opens in initiating and indicating circuits are detected?</span>
+        </td>
+        <td><span ng-bind="data.inspecQuest3Note"></span></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest4 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest4 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest4 === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Electrical shorts in initiating and indicating circuits are detected</span>
+        </td>
+        <td><span ng-bind="data.inspecQuest4Note"></span></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest5 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest5 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest5 === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Ground faults in alarm circuits are detected?</span>
+        </td>
+        <td><span ng-bind="data.inspecQuest5Note"></span></td>
+      </tr>
+    </tbody>
+</section>

@@ -1,0 +1,92 @@
+<h5 class="text-center"><small>This suppression report is in accordance with NFPA 72 version 2016</small></h5>
+<ng-include src="'/static/common/monitoring.html'"></ng-include>
+<section>
+  <table class="table table-condensed tabla-rich blue-headers" ng-repeat="panel in data.controlPanels track by $index">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Control Panel #{{$index + 1}} <small> — Annual testing frequency</small>
+        </th>
+      </tr>
+      <tr>
+        <td style="width: 30%;">Location</td>
+        <td style="width: 15%;">Manufacturer</td>
+        <td style="width: 15%;">Model</td>
+        <td>Overcurrent protection?</td>
+        <td>Location of power disconnect (breaker panel)</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span ng-bind="panel.location"></span>
+        </td>
+        <td>
+          <span ng-bind="panel.make"></span>
+        </td>
+        <td>
+          <span ng-bind="panel.model"></span>
+        </td>
+        <td>
+          <span ng-bind="panel.protection"></span>
+        </td>
+        <td>
+          <span ng-bind="panel.breakerPanel"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Battery <u ng-bind="panel.batteryVolts"></u> volts <u ng-bind="panel.batteryAmps"></u> amps</span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <span>Battery quantity <u ng-bind="panel.batteryQuantity"></u></span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <span>Battery voltage with power on <u ng-bind="panel.voltageWithPowerOn"></u></span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr ng-if="data.frequency === 'Annual'">
+        <td>
+          <span>Panel battery voltage with power off and under load? <u
+          ng-bind="panel.voltageWithPowerOff"></u></span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr ng-if="data.frequency === 'Annual'">
+        <td>
+          <span>Did batteries mantain proper voltage during 5 minute load test? <u
+          ng-bind="panel.properVoltage5min"></u></span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="10">
+          <strong>Hazard Area:</strong>
+          <u ng-bind="panel.areaProtected"></u>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,221 @@
+<section id="flow-test-section">
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10"></th>
+      </tr>
+      <tr>
+        <td colspan="10">
+          <strong style="font-size: 14px">{{data.frequency}} Flow Test<small> — {{data.frequency}} testing frequency</small></strong>
+        </td>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="2" style="width: 20%">
+          Churn (0%)
+        </th>
+        <th>
+          Flow GPM
+        </th>
+        <th>
+          Suction PSI
+        </th>
+        <th>
+          Discharge PSI
+        </th>
+        <th>
+          Net Pressure PSI
+        </th>
+        <th>
+          Speed RPM
+        </th>
+      </tr>
+      <tr>
+        <td ng-bind="data.flowTestArr.churn[0].gpm">
+        </td>
+        <td ng-bind="data.flowTestArr.churn[0].suctionPSI">
+        </td>
+        <td ng-bind="data.flowTestArr.churn[0].dischargePSI">
+        </td>
+        <td ng-bind="data.flowTestArr.churn[0].netPressurePSI">
+        </td>
+        <td ng-bind="data.flowTestArr.churn[0].speedRPM">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-condensed tabla-rich">
+    <tbody>
+      <tr>
+        <th rowspan="7" style="width: 20%">
+          100% Rated Flow
+        </th>
+        <th>
+          Nozzle #
+        </th>
+        <th>
+          Size
+        </th>
+        <th>
+          Pilot Pressure
+        </th>
+        <th>
+          Flow GPM
+        </th>
+        <th>
+          Suction PSI
+        </th>
+        <th>
+          Discharge PSI
+        </th>
+        <th>
+          Net Pressure PSI
+        </th>
+        <th>
+          Speed RPM
+        </th>
+      </tr>
+      <tr ng-repeat="nozzle in data.flowTestArr.rated100 track by $index">
+        <td>
+          {{$index + 1}}
+        </td>
+        <td ng-bind="nozzle.size">
+        </td>
+        <td ng-bind="nozzle.pilotPressure">
+        </td>
+        <td ng-bind="nozzle.gpm">
+        </td>
+        <td>
+          <span ng-if="$index === 0" ng-bind="nozzle.suctionPSI"></span>
+        </td>
+        <td>
+          <span ng-if="$index === 0" ng-bind="nozzle.dischargePSI"></span>
+        </td>
+        <td>
+          <span ng-if="$index === 0" ng-bind="nozzle.netPressurePSI"></span>
+        </td>
+        <td>
+          <span ng-if="$index === 0" ng-bind="nozzle.speedRPM"></span>
+        </td>
+      </tr>
+      <tr ng-repeat="space in spRated100">
+        <td>{{$index + data.flowTestArr.rated100.length + 1}}</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-condensed tabla-rich">
+    <tbody>
+      <tr>
+        <th rowspan="8" style="width: 20%">
+          150% Rated Flow
+        </th>
+        <th>
+          Nozzle #
+        </th>
+        <th>
+          Size
+        </th>
+        <th>
+          Pilot Pressure
+        </th>
+        <th>
+          Flow GPM
+        </th>
+        <th>
+          Suction PSI
+        </th>
+        <th>
+          Discharge PSI
+        </th>
+        <th>
+          Net Pressure PSI
+        </th>
+        <th>
+          Speed RPM
+        </th>
+      </tr>
+      <tr ng-repeat="nozzle in data.flowTestArr.rated150.slice(0, 4) track by $index">
+        <td>
+          {{$index + 1}}
+        </td>
+        <td ng-bind="nozzle.size">
+        </td>
+        <td ng-bind="nozzle.pilotPressure">
+        </td>
+        <td ng-bind="nozzle.gpm">
+        </td>
+        <td>
+          <span ng-if="$index === 0" ng-bind="nozzle.suctionPSI"></span>
+        </td>
+        <td>
+          <span ng-if="$index === 0" ng-bind="nozzle.dischargePSI"></span>
+        </td>
+        <td>
+          <span ng-if="$index === 0" ng-bind="nozzle.netPressurePSI"></span>
+        </td>
+        <td>
+          <span ng-if="$index === 0" ng-bind="nozzle.speedRPM"></span>
+        </td>
+      </tr>
+      <tr ng-repeat="space in spRated150">
+        <td>{{$index + data.flowTestArr.rated150.length + 1}}</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td ng-bind="data.flowTestArr.rated150[6].size">
+        </td>
+        <td ng-bind="data.flowTestArr.rated150[6].pilotPressure">
+        </td>
+        <td ng-bind="data.flowTestArr.rated150[6].gpm">
+        </td>
+        <td colspan="4" class="text-left">
+          Suction pressure at %150 of rated flow at least 0 psi?
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].suctionPressureAt150 === 'Yes' ? true : false">
+          <label>
+            <span></span>
+            Yes
+          </label>
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].suctionPressureAt150 === 'No' ? true : false">
+          <label>
+            <span></span>
+            No
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="8" class="text-left">
+          For pump system installed per NFPA 20, using suction tanks where NFPA 20 permitted the suction pressure to be not less than 3 psi, is the suction pressure at least 3 psi?
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].isSuction3PSI === 'Yes' ? true : false">
+          <label>
+            <span></span>
+            Yes
+          </label>
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].isSuction3PSI === 'No' ? true : false">
+          <label>
+            <span></span>
+            No
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+</section>

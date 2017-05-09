@@ -1,0 +1,833 @@
+<section ng-repeat="riser in data.risers['Antifreeze Loop'] track by $index">
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">{{riser.type}} #{{$index + 1}}</th>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <span>Yes</span>
+        </td>
+        <td class="short-column">
+          <span>No</span>
+        </td>
+        <td class="short-column">
+          <span>N/A</span>
+        </td>
+        <td class="short-column">
+          <span>Freq.</span>
+        </td>
+        <td>
+          <span></span>
+        </td>
+        <td style="width:35%">
+          <span>Notes</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>What is the coverage area for this antifreeze loop?<u ng-bind="riser.quest01"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest01Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest02 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest02 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest02 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Was the antifreeze solution tested today?</span>
+        </td>
+        <td><span ng-bind="riser.quest02Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Antifreeze loop is protected to what degree? <u ng-bind="riser.quest03"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest03Note"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section ng-repeat="riser in data.risers['Deluge System'] track by $index">
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">{{riser.type}} #{{$index + 1}}</th>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <span>Yes</span>
+        </td>
+        <td class="short-column">
+          <span>No</span>
+        </td>
+        <td class="short-column">
+          <span>N/A</span>
+        </td>
+        <td class="short-column">
+          <span>Freq.</span>
+        </td>
+        <td>
+          <span></span>
+        </td>
+        <td style="width:35%">
+          <span>Notes</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest01 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest01 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest01 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Does the deluge valve appear to be protected from freezing?</span>
+        </td>
+        <td><span ng-bind="riser.quest01Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest02 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest02 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest02 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Is the deluge valve house heated?</span>
+        </td>
+        <td><span ng-bind="riser.quest02Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest03 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest03 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest03 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Is the air pressure and priming water levels normal?</span>
+        </td>
+        <td><span ng-bind="riser.quest03Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest04 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest04 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest04 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Did the deluge valve operate properly during this inspection?</span>
+        </td>
+        <td><span ng-bind="riser.quest04Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest05 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest05 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest05 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Is the interior of the deluge valve satisfactory?</span>
+        </td>
+        <td><span ng-bind="riser.quest05Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest06 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest06 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest06 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Did the air maintenance device operate properly?</span>
+        </td>
+        <td><span ng-bind="riser.quest06Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>What is the water pressure at the deluge valve?<u ng-bind="riser.quest07"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest07Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>What is the water pressure at the most remote nozzle?<u ng-bind="riser.quest08"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest08Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest09 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest09 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest09 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Was there unobstructed discharge from all nozzles?</span>
+        </td>
+        <td><span ng-bind="riser.quest09Note"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section ng-repeat="riser in data.risers['Dry System'] track by $index">
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          {{riser.type}} #{{$index + 1}}
+        </th>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <span>Yes</span>
+        </td>
+        <td class="short-column">
+          <span>No</span>
+        </td>
+        <td class="short-column">
+          <span>N/A</span>
+        </td>
+        <td class="short-column">
+          <span>Freq.</span>
+        </td>
+        <td>
+          <span></span>
+        </td>
+        <td style="width:35%">
+          <span>Notes</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">Q</td>
+        <td>
+          <span>What is the air pressure? <u ng-bind="riser.quest01 | limitTo:3"></u> psi</span>
+        </td>
+        <td><span ng-bind="riser.quest01Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest02 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest02 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest02 === 'N/A'"></i>
+        </td>
+        <td class="short-column">Q</td>
+        <td>
+          <span>Is the air pressure and priming water levels normal?</span>
+        </td>
+        <td><span ng-bind="riser.quest02Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest03 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest03 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest03 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Did the dry valve operate properly during this inspection?</span>
+        </td>
+        <td><span ng-bind="riser.quest03Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>How long did it take the dry valve to trip? (seconds) <u ng-bind="riser.quest04"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest04Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>What was the air pressure at trip? <u ng-bind="riser.quest05"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest05Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>How long did it take for water to reach the ITV? (seconds) <u ng-bind="riser.quest06"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest06Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest07 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest07 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest07 === 'N/A'"></i>
+        </td>
+        <td class="short-column">Q</td>
+        <td>
+          <span>Did the quick opening device operate properly?</span>
+        </td>
+        <td><span ng-bind="riser.quest07Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest08 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest08 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest08 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Did the air compressor operate properly?</span>
+        </td>
+        <td><span ng-bind="riser.quest08Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest09 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest09 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest09 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Were all low points drained during this inspection?</span>
+        </td>
+        <td><span ng-bind="riser.quest09Note"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section ng-repeat="riser in data.risers['Foam System'] track by $index">
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">{{riser.type}} #{{$index + 1}}</th>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <span>Yes</span>
+        </td>
+        <td class="short-column">
+          <span>No</span>
+        </td>
+        <td class="short-column">
+          <span>N/A</span>
+        </td>
+        <td class="short-column">
+          <span>Freq.</span>
+        </td>
+        <td>
+          <span></span>
+        </td>
+        <td style="width:35%">
+          <span>Notes</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest01 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest01 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest01 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Are the system operating instructions posted?</span>
+        </td>
+        <td><span ng-bind="riser.quest01Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest02 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest02 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest02 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Were the nozzles inspected for proper orientation, blockage and caps (if provided) are in place</span>
+        </td>
+        <td><span ng-bind="riser.quest02Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest03 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest03 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest03 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Is the valve in the portioning system inspected for proper position?</span>
+        </td>
+        <td><span ng-bind="riser.quest03Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest04 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest04 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest04 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Was the foam concentrate tank to ensure it was full?</span>
+        </td>
+        <td><span ng-bind="riser.quest04Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest05 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest05 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest05 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Were the foam concentrate strainers inspected?</span>
+        </td>
+        <td><span ng-bind="riser.quest05Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest06 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest06 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest06 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Was the area beneath and surrounding the foam system inspected to assure adequate drainage?</span>
+        </td>
+        <td><span ng-bind="riser.quest06Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest07 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest07 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest07 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Was the foam strainer cleaned?</span>
+        </td>
+        <td><span ng-bind="riser.quest07Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest08 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest08 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest08 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Was the foam concentration sampled to ensure it was within 10% of aceptance ratio?</span>
+        </td>
+        <td><span ng-bind="riser.quest08Note"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section ng-repeat="riser in data.risers['Preaction System'] track by $index">
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">{{riser.type}} #{{$index + 1}}</th>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <span>Yes</span>
+        </td>
+        <td class="short-column">
+          <span>No</span>
+        </td>
+        <td class="short-column">
+          <span>N/A</span>
+        </td>
+        <td class="short-column">
+          <span>Freq.</span>
+        </td>
+        <td>
+          <span></span>
+        </td>
+        <td style="width:35%">
+          <span>Notes</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest01 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest01 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest01 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Does the preaction valve apper to be protected from freezing?</span>
+        </td>
+        <td><span ng-bind="riser.quest01Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest02 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest02 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest02 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Is the preaction valve house heated?</span>
+        </td>
+        <td><span ng-bind="riser.quest02Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest03 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest03 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest03 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Is the air pressure and priming water levels normal?</span>
+        </td>
+        <td><span ng-bind="riser.quest03Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest04 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest04 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest04 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Did the preaction valve operate properly during this inspection?</span>
+        </td>
+        <td><span ng-bind="riser.quest04Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest05 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest05 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest05 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Is the interior of the preaction valve satisfactory?</span>
+        </td>
+        <td><span ng-bind="riser.quest05Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest06 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest06 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest06 === 'N/A'"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>Did the air maintenance device operate properly?</span>
+        </td>
+        <td><span ng-bind="riser.quest06Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>What is the water pressure at the preaction valve?<u ng-bind="riser.quest07"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest07Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td><span></span></td>
+        <td>
+          <span>What is the water pressure at the most remote sprinkler head?<u ng-bind="riser.quest08"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest08Note"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section ng-repeat="riser in data.risers['Wet System'] track by $index">
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">{{riser.type}} #{{$index + 1}}</th>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <span>Yes</span>
+        </td>
+        <td class="short-column">
+          <span>No</span>
+        </td>
+        <td class="short-column">
+          <span>N/A</span>
+        </td>
+        <td class="short-column">
+          <span>Freq.</span>
+        </td>
+        <td>
+          <span></span>
+        </td>
+        <td style="width:35%">
+          <span>Notes</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-show="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td><span>Q</span></td>
+        <td>
+          <span>Location of ITV? <u ng-bind="riser.quest01"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest01Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="riser.quest02 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="riser.quest02 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="riser.quest02 === 'N/A'"></i>
+        </td>
+        <td><span>Q</span></td>
+        <td>
+          <span>Did ITV trip the alarm?</span>
+        </td>
+        <td><span ng-bind="riser.quest02Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td><span>Q</span></td>
+        <td>
+          <span>How many seconds did it take for the ITV to trip the alarms? <u ng-bind="riser.quest03"></u></span>
+        </td>
+        <td><span ng-bind="riser.quest03Note"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

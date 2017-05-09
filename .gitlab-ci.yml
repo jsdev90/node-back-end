@@ -1,0 +1,24 @@
+before_script:
+  - . ~/.nvm/nvm.sh
+  - nvm use 6.9.1
+  - npm install -g gulp
+  - npm install -g forever
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - deploy
+
+deploy_estable:
+  stage: deploy
+  script:
+    - npm install
+    - rsync -rlDv --delete * /software/backend/
+    - sh /software/backend/produccion.sh
+  environment:
+    name: estable
+    url: http://beta.firelabinc.com:6010
+  only:
+  - estable

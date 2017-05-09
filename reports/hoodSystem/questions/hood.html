@@ -1,0 +1,172 @@
+<section>
+  <table class="table table-condensed  tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Hood System<small> — {{data.frequency}} testing frequency</small></th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          <span>Yes</span>
+        </th>
+        <th class="short-column">
+          <span>No</span>
+        </th>
+        <th class="short-column">
+          <span>N/A</span>
+        </th>
+        <th class="short-column">
+          <span>Freq.</span>
+        </th>
+        <th>
+          <span></span>
+        </th>
+        <th style="width: 33%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest25 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest25 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest25 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is the coverage of all appliances compliant?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest25Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest26 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest26 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest26 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is the coverage of the exhaust duct and plenum areas compliant?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest26Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest27 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest27 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest27 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Were the cartridge weights checked?</span>
+          <u ng-if="data.inspecQuest27 === 'Yes'" ng-bind="data.cartridgeWeight"></u>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest27Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest28 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest28 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest28 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Are the piping and cylinders securely fastened to the structure?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest28Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest29 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest29 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest29 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Has the equipment/appliances remained the same since last inspection?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest29Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest30 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest30 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest30 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is the hood system UL 300 compliant?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest30Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest31 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest31 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest31 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is the hood system armed and operational?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest31Note"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,8 @@
+dist/
+*.log
+*sublime*
+bower_components
+node_modules
+target/
+coverage/
+reports/uploads

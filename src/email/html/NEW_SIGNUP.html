@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      #outlook a {
+        padding: 0;
+      }
+      /* Force Outlook to provide a "view in browser" message */
+
+      #outlook {
+        height: 100%;
+      }
+
+      .ReadMsgBody {
+        width: 100%;
+      }
+
+      .ExternalClass {
+        width: 100%;
+      }
+      /* Force Hotmail to display emails at full width */
+
+      .ExternalClass,
+      .ExternalClass div,
+      .ExternalClass font,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass td {
+        line-height: 100%;
+      }
+      /* Force Hotmail to display normal line spacing */
+
+      a,
+      blockquote,
+      body,
+      li,
+      p,
+      table,
+      td {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      /* Prevent WebKit and Windows mobile changing default text sizes */
+
+      table,
+      td {
+        border-collapse: collapse;
+        mso-table-lspace: 0;
+        mso-table-rspace: 0;
+      }
+      /* Remove spacing between tables in Outlook 2007 and up */
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+      /* Allow smoother rendering of resized image in Internet Explorer */
+      /* .Products3columns a { display:block;} */
+
+      #button a {
+        color: #FFFFFF;
+      }
+
+      a:link img {
+        display: block;
+      }
+      /*  RESET STYLES  */
+
+      body {
+        height: 100% !important;
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+        text-align: left !important;
+      }
+
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+
+      img[class="img-max"] {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      a img {
+        border: none !important;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body marginheight="0" marginwidth="0" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" offset="0" style="background: #2f353b;
+  font-size: 18px;
+  font-family: Helvetica,Arial,sans-serif;
+  color: #666;
+  padding: 30px 0">
+    <header style="text-align: center;
+    height: 100px;
+    margin-bottom: 30px;">
+      <img src="http://beta.firelabinc.com/resources/images/Aries-Soft.png" width="200"/>
+    </header>
+    <h2 style="text-align: center; color: #e43a45;">New user signed up!</h2>
+    <section style="width: 80%;
+    background: white;
+    padding: 25px 30px 25px 30px;
+    margin: 0 auto;
+    border: 5px solid #e43a45;
+    margin-bottom: 30px;">
+      <p>Hi,</p>
+      <p>
+        The following customer has signed up in Aries for free trial on date {{client.subscribedOn}}
+      </p>
+      <div class="information">
+        <table>
+          <tbody>
+            <tr>
+              <td>First Name:</td>
+              <td>{{client.firstName}}</td>
+            </tr>
+            <tr>
+              <td>Last Name:</td>
+              <td>{{client.lastName}}</td>
+            </tr>
+            <tr>
+              <td>Business Name:</td>
+              <td>{{client.businessName}}</td>
+            </tr>
+            <tr>
+              <td>Business Phone:</td>
+              <td>{{client.businessPhone}}</td>
+            </tr>
+            <tr>
+              <td>Business Address:</td>
+              <td>{{client.businessAddress}}</td>
+            </tr>
+            <tr>
+              <td>City:</td>
+              <td>{{client.city}}</td>
+            </tr>
+            <tr>
+              <td>State:</td>
+              <td>{{client.state}}</td>
+            </tr>
+            <tr>
+              <td>Zipcode:</td>
+              <td>{{client.zip}}</td>
+            </tr>
+            <tr>
+              <td>Email ID:</td>
+              <td>{{client.email}}</td>
+            </tr>
+            <tr>
+              <td>How did you find us?:</td>
+              <td>{{client.findUs}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Thank You!</p>
+    </section>
+  </body>
+</html>

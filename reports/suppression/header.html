@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../../static/common/headerStyles.css" media="all">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td class="logos">
+        <img src="{{data.logoDir}}" onerror="this.style.display='none'">
+        <img src="{{data.imgAddDir}}" onerror="this.style.display='none'">
+      </td>
+      <td colspan="2" style="text-align: right" class="info-right">
+        <ul>
+          <li>
+            <h1>
+              Inspection and Testing Report
+            </h1>
+          </li>
+          <li>
+            <h1>
+              {{data.frequency}} Suppression System
+            </h1>
+          </li>
+          <li>
+            <strong ng-bind="data.systemType !== 'Other' ? data.systemType : data.systemTypeOther"></strong>
+          </li>
+          <li>
+            <strong>
+              Inspected by: {{data.inspectorName}}
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Date: {{data.modifiedAt}}
+            </strong>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    {{{header-contactInfo}}}
+  </table>
+  <div style="text-align: right;">
+    <span id="paginate"></span>
+  </div>
+    <hr>
+  <script>
+  var paginate = {};
+  var url = document.location.search.substring(1).split("&");
+  for (var i in url) {
+    var params = url[i].split("=", 2);
+    if (!paginate[params[0]]) {
+      paginate[params[0]] = unescape(params[1]);
+    }
+  }
+  document.getElementById("paginate").innerHTML = "Pag " + paginate.page + " of " +
+    paginate.topage + "";
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<section class="new-page" ng-if="data.pictures.length > 0">
+  <div class="row" ng-repeat="pic in data.pictures">
+    <div class="col-xs-6" ng-repeat="p in pic" style="padding-top: 10px; text-align: center">
+      <div>
+        <img ng-src="{{p.src}}">
+      </div>
+      <div>
+        <caption>{{p.sub}}</caption>
+      </div>
+    </div>
+  </div>
+</section>

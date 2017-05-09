@@ -1,0 +1,25 @@
+<section>
+  <table class="table  tabla-rich table-condensed blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Cylinders <small> — {{data.frequency}} testing frequency</small></th>
+      </tr>
+      <tr>
+        <th style="width: 20%">Size of cylinder</th>
+        <th style="width: 20%">Manufacturer</th>
+        <th style="width: 20%">Model</th>
+        <th style="width: 20%">Hydrotest Due Date</th>
+        <th style="width: 20%">Recharge Due Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="cyl in data.cylinders">
+        <td><span ng-bind="cyl.size"></span></td>
+        <td><span ng-bind="cyl.make"></span></td>
+        <td><span ng-bind="cyl.model"></span></td>
+        <td><span ng-bind="cyl.lastHydroDate"></span></td>
+        <td><span ng-bind="cyl.lastRechargeDate"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

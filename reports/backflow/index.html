@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="App">
+  <head>
+    <title>Report | Back Flow</title>
+    <script>
+      document.write("<base href=\"" + document.location + "\" />");
+    </script>
+    <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="../../static/common/angular.min.js"></script>
+    <script src="./reportController.js"></script>
+    <script type="text/javascript" src="../../static/common/jquery.min.js"></script>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta http-equiv="Content-Language" content="en">
+    <link type="text/css" href="../../static/common/styles.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../static/common/generalStyles.css" media="all">
+    <meta name="author" content="Ciris Informatic Solutions">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/accounting.js/0.4.1/accounting.min.js"></script>
+    <link href="../../static/common/font-awesome.min.css" rel="stylesheet" media="all">
+  </head>
+
+  <body ng-controller="ReportCtrl">
+    <div class="col-xs-12">
+      <ng-include src="'information.html'"></ng-include>
+      <ng-include src="'reducedPressure.html'"></ng-include>
+      <ng-include src="'valveAssembly.html'"></ng-include>
+      <ng-include src="'pressureVaccum.html'"></ng-include>
+      <div class="unbreakable min-margin">
+        <ng-include src="'/static/common/notes.html'"></ng-include>
+        <ng-include src="'/static/common/footer.html'"></ng-include>
+      </div>
+      <ng-include src="'/static/common/pictures.html'"></ng-include>
+    </div>
+  </body>
+
+</html>

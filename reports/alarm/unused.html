@@ -1,0 +1,28 @@
+<section>
+  <ul class="device-list">
+    <li ng-repeat="device in unusedDevices track by $index">{{device}}: N/A</li>
+  </ul>
+  <div class="clearfix"></div>
+</section>
+<section>
+  <table style="margin: 10px 0 0 0;">
+    <tr>
+      <td>
+        <strong style="font-size: 11px !important;">Percentage of equipment tested in this inspection </strong>
+      </td>
+      <td style="width: 100px; text-align: center;">
+        <u style="display: block; font-size: 11px;" ng-bind="data.percEquipmentTested+'%'"></u>
+      </td>
+      <td>
+        <strong style="font-size: 11px !important;">Percentage of equipment tested so far this year </strong>
+      </td>
+      <td style="width: 100px; text-align: center;">
+        <u style="display: block; font-size: 11px;" ng-bind="data.equipmentTestedSoFar+'%'"></u>
+      </td>
+    </tr>
+  </table>
+  <div style="max-width: 735px; word-wrap: break-word;">
+    <strong style="font-size: 11px !important;">General area of property tested during this inspection </strong>
+    <u style="font-size: 11px;" ng-bind="data.areaOfTesting"></u>
+  </div>
+</section>

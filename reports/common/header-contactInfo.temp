@@ -1,0 +1,63 @@
+  <tr>
+    <td style="width: 30%">
+      <strong>
+        Owner/Agent
+      </strong>
+    </td>
+    <td class="prop-info">
+      <strong>
+        Property
+      </strong>
+    </td>
+  </tr>
+  <tr >
+    <td style="width: 30%">
+      <span class="info">
+        {{data.ownerInfo.ownerName}}
+        {{^data.ownerInfo.ownerName}}
+          {{data.custInfo.customerName}}
+        {{/data.ownerInfo.ownerName}}
+      </span>
+    </td>
+    <td class="prop-info">
+      <span class="info">{{data.custInfo.customerName}}</span>
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 30%">
+      <span class="info">
+        {{data.ownerInfo.address.line1}}
+        {{^data.ownerInfo.address.line1}}
+          {{data.custInfo.address.line1}}
+        {{/data.ownerInfo.address.line1}}
+      </span>
+    </td>
+    <td class="prop-info">
+      <span class="info">{{data.custInfo.address.line1}}</span>
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 30%">
+      <span class="info">
+        {{data.ownerInfo.address.city}}
+        {{^data.ownerInfo.address.city}}
+          {{data.custInfo.address.city}}
+        {{/data.ownerInfo.address.city}}
+        {{data.ownerInfo.address.state}}
+        {{^data.ownerInfo.address.state}}
+          {{data.custInfo.address.state}}
+        {{/data.ownerInfo.address.state}}
+        {{data.ownerInfo.address.zip}}
+        {{^data.ownerInfo.address.zip}}
+          {{data.custInfo.address.zip}}
+        {{/data.ownerInfo.address.zip}}
+      </span>
+    </td>
+    <td class="prop-info">
+      <span class="info">
+        {{data.custInfo.address.city}}
+        {{data.custInfo.address.state}}
+        {{data.custInfo.address.zip}}
+      </span>
+    </td>
+  </tr>

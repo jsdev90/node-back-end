@@ -1,0 +1,123 @@
+<section style="position:relative;">
+  <div ng-show="data.testType !== 'Double Check Valve Assembly'" class="not-applicable-water">Not Applicable</div>
+  <table class="table table-condensed tabla-rich min-margin">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Double Check Valve Assembly
+        </th>
+      </tr>
+    </thead>
+    <tbody class="blue-body-top" style="border: 2px solid #333 !important;">
+      <tr class="blue-body-top">
+        <td rowspan="2" style="width: 25%" class="blue-body-top">
+          <span>
+            Initial Test:
+          </span>
+        </td>
+        <td class="blue-body-top">
+          <span>
+            1st Check Valve
+          </span>
+        </td>
+        <td class="blue-body-top" style="border-right: 2px solid #333 !important;">
+          <span>
+            2nd Check Valve
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul style="padding:0; margin-bottom:0" class="list-inline">
+            <li>
+              <input type="checkbox" ng-checked="data.doubleCheckValve1st === 'Held' ? true : false">
+              <label>
+                <span></span>
+                Held at <u ng-bind="data.doublePsid1st"></u> psid
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" ng-checked="data.doubleCheckValve1st === 'Leaked' ? true : false">
+              <label>
+                <span></span>
+                Leaked
+              </label>
+            </li>
+          </ul>
+        </td>
+        <td style="border-right: 2px solid #333 !important;">
+          <ul style="padding-left:0; margin-bottom:0" class="list-inline">
+            <li>
+              <input type="checkbox" ng-checked="data.doubleCheckValve2nd === 'Held' ? true : false">
+              <label>
+                <span></span>
+                Held at <u ng-bind="data.doublePsid2nd"></u> psid
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" ng-checked="data.doubleCheckValve2nd === 'Leaked' ? true : false">
+              <label>
+                <span></span>
+                Leaked
+              </label>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Repairs Made/Materials Used:
+          </span>
+        </td>
+        <td colspan="2" style="border-right: 2px solid #333 !important;">
+          <span ng-bind="data.doubleRepairsMade2nd">
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">
+          <span>
+            Test After Repair:
+          </span>
+        </td>
+        <td>
+          <span>
+            1st Check Valve
+          </span>
+        </td>
+        <td  style="border-right: 2px solid #333 !important;">
+          <span>
+            2nd Check Valve
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul style="padding-left:0; margin-bottom:0">
+            <li>
+              <input type="checkbox" ng-checked="data.doubleCheckValve1st === 'Leaked' ? true : false">
+              <label>
+                <span></span>
+                Held at <u ng-bind="data.doubleFinalPsid1st"></u> psid
+              </label>
+            </li>
+          </ul>
+        </td>
+        <td  style="border-right: 2px solid #333 !important;">
+          <ul style="padding-left:0; margin-bottom:0">
+            <li>
+              <input type="checkbox" ng-checked="data.doubleCheckValve2nd === 'Leaked' ? true : false">
+              <label>
+                <span></span>
+                Held at <u ng-bind="data.doubleFinalPsid2nd"></u> psid
+              </label>
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>

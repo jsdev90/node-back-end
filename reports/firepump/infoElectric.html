@@ -1,0 +1,73 @@
+<h5 class="text-center"><small>This fire pump report is in accordance with NFPA 25</small></h5>
+<section>
+  <table class="table table-condensed tabla-rich min-margin table-separator blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10"></th>
+      </tr>
+      <tr>
+        <th colspan="10" class="text-center">
+          <strong style="font-size: 14px">Pump #1 Information</strong>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="width:17%">Make</td>
+        <td style="width:16%" ng-bind="data.pumpMake"></td>
+        <td style="width:17%">Max Suction Pressure</td>
+        <td style="width:16%" ng-bind="data.maxPressure"></td>
+        <td style="width:17%">Service Factor</td>
+        <td style="width:16%" ng-bind="data.sf"></td>
+      </tr>
+      <tr>
+        <td>Model</td>
+        <td ng-bind="data.pumpModel"></td>
+        <td>Max PSI (shutoff)</td>
+        <td ng-bind="data.maxPSI"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Pump Serial #</td>
+        <td ng-bind="data.pumpSerial"></td>
+        <td>Rated Capacity</td>
+        <td ng-bind="data.capacityGPM"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Rated RPM</td>
+        <td ng-bind="data.ratedRPM"></td>
+        <td>Rated Pressure</td>
+        <td ng-bind="data.pressurePSI"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Controller Make</td>
+        <td ng-bind="data.ctrlMake"></td>
+        <td>150% Rated Capacity</td>
+        <td ng-bind="data.capacityGPM150"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Controller Model</td>
+        <td ng-bind="data.ctrlModel"></td>
+        <td>Fuel Load Amp (FLA)</td>
+        <td ng-bind="data.fla"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Controller Serial #</td>
+        <td ng-bind="data.ctrlSerial"></td>
+        <td>Rated Voltage</td>
+        <td ng-bind="data.ratedVolt"></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

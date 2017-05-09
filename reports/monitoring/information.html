@@ -1,0 +1,28 @@
+<h5 class="text-center"><small>This monitoring report is in accordance with NFPA 72 version 2016</small></h5>
+<ng-include src="'/static/common/monitoring.html'"></ng-include>
+<section>
+  <div class="header">System Information</div>
+  <table class="table table-condensed tabla-rich">
+    <tbody>
+      <tr>
+        <td colspan="3" style="border-top: 1px solid #999">
+          <strong>
+            Location:
+          </strong>
+          <span ng-bind="data.panelLocation"></span>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%">
+          <strong>Manufacturer:</strong>
+          <span ng-bind="data.panelMake"></span>
+        </td>
+        <td>
+          <strong>Model:</strong>
+          <span ng-bind="data.panelModel"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>

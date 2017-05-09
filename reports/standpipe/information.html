@@ -1,0 +1,114 @@
+<h5 class="text-center"><small>This standpipe/hose report is in accordance with NFPA 25 version 2014</small></h5>
+<section style="position:relative;" ng-if="validate(['5'])">
+  <div class="header" style="position:absolute; top: 10px;">Pressure Reducing Valves</div>
+  <table class="table  tabla-rich table-condensed">
+    <thead>
+      <tr class="no-borders">
+        <th colspan="2" class="top-left no-borders"></th>
+        <th colspan="4" class="text-center blue-headers" style="border-bottom: 1px solid #fff !important;">
+            Pressure Reducing Valves Flow Test
+        </th>
+        <th class="no-borders">
+        </th>
+      </tr>
+      <tr class="no-borders">
+        <th colspan="2" class="no-borders"></th>
+        <th colspan="2" class="text-center blue-headers border-white" style="border-bottom: 1px solid #fff !important;">Static pressure</th>
+        <th colspan="2" class="text-center blue-headers" style="border-bottom: 1px solid #fff !important;">Flow pressure</th>
+        <th class="no-borders"></th>
+      </tr>
+      <tr>
+        <th class="text-center blue-headers border-white" style="width: 20%;">Type</th>
+        <th class="text-center blue-headers border-white" style="width: 35%;">Location</th>
+        <th class="text-center blue-headers border-white">Inlet</th>
+        <th class="text-center blue-headers border-white">Outlet</th>
+        <th class="text-center blue-headers border-white">Inlet</th>
+        <th class="text-center blue-headers border-white">Outlet</th>
+        <th class="text-center blue-headers">Flow(gpm)</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="stand in data.standpipes track by $index">
+      <tr ng-repeat="valve in stand.reducingValves">
+        <td>
+          <span>Standpipe {{$parent.$index + 1}} PRV {{$index + 1}}</span>
+        </td>
+        <td>
+          <span ng-bind="valve.location"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.staticInletPressure"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.staticOutletPressure"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.inletPressure"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.outletPressure"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.flowGPM"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<br>
+<section style="position:relative;" ng-if="validate(['5'])">
+  <div class="header" style="position:absolute; top: 10px;">Restricting Valves</div>
+  <table class="table  tabla-rich table-condensed">
+    <thead>
+      <tr class="no-borders">
+        <th colspan="2" class="top-left no-borders">
+        </th>
+        <th colspan="4" class="text-center blue-headers" style="border-bottom: 1px solid #fff !important;">
+            Restricting Valves Flow Test
+        </th>
+        <th class="no-borders">
+        </th>
+      </tr>
+      <tr class="no-borders">
+        <th colspan="2" class="no-borders"></th>
+        <th colspan="2" class="text-center blue-headers border-white" style="border-bottom: 1px solid #fff !important;">Static pressure</th>
+        <th colspan="2" class="text-center blue-headers" style="border-bottom: 1px solid #fff !important;">Flow pressure</th>
+        <th class="no-borders"></th>
+      </tr>
+      <tr>
+        <th class="text-center blue-headers border-white" style="width: 20%;">Type</th>
+        <th class="text-center blue-headers border-white" style="width: 35%;">Location</th>
+        <th class="text-center blue-headers border-white">Inlet</th>
+        <th class="text-center blue-headers border-white">Outlet</th>
+        <th class="text-center blue-headers border-white">Inlet</th>
+        <th class="text-center blue-headers border-white">Outlet</th>
+        <th class="text-center blue-headers">Flow(gpm)</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="system in data.hoseStations track by $index">
+      <tr ng-repeat="valve in system.restrictValves">
+        <td>
+          <span>Hose System {{$parent.$index + 1}} RV {{$index + 1}}</span>
+        </td>
+        <td>
+          <span ng-bind="valve.location"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.staticInletPressure"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.staticOutletPressure"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.inletPressure"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.outletPressure"></span>
+        </td>
+        <td>
+          <span ng-bind="valve.flowGPM"></span>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</section>

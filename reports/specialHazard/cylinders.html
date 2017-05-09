@@ -1,0 +1,27 @@
+<section>
+  <table class="table  tabla-rich table-condensed blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Cylinders
+        </th>
+      </tr>
+      <tr>
+        <td class=" text-center" style="width: 20%">Size of cylinder</td>
+        <td class=" text-center" style="width: 20%">Manufacturer</td>
+        <td class=" text-center" style="width: 20%">Model</td>
+        <td class=" text-center" style="width: 20%">Hydrotest Due Date</td>
+        <td class=" text-center" style="width: 20%">6 yr Maintenance Due Date</td>
+      </tr>
+    </thead>
+    <tbody ng-repeat="cyl in data.cylinders" style="border-top: 1px solid #999">
+      <tr>
+        <td><span ng-bind="cyl.size"></span></td>
+        <td><span ng-bind="cyl.make"></span></td>
+        <td><span ng-bind="cyl.model"></span></td>
+        <td><span ng-bind="cyl.lastHydroDate"></span></td>
+        <td><span ng-bind="cyl.lastRechargeDate"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

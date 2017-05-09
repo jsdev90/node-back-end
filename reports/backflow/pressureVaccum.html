@@ -1,0 +1,159 @@
+<section style="position:relative;">
+  <div ng-show="data.testType !== 'Pressure Vacuum Breaker'" class="not-applicable-water">Not Applicable</div>
+  <table class="table table-condensed tabla-rich min-margin black-border">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Pressure Vacuum Breaker
+        </th>
+      </tr>
+    </thead>
+    <tbody class="blue-body-top" style="border: 2px solid #333 !important;">
+      <tr>
+        <td rowspan="2" style="width: 25%" class="blue-body-top">
+          <span>
+            Initial Test:
+          </span>
+        </td>
+        <td class="blue-body-top">
+          <span>
+            Air inlet
+          </span>
+        </td>
+        <td class="blue-body-top"  style="border-right: 2px solid #333 !important;">
+          <span>
+            Check Valve
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul style="padding:0; margin-bottom:0" class="list-inline">
+            <li>
+              <input type="checkbox" ng-checked="data.airInlet === 'Opened' ? true : false">
+              <label>
+                <span></span>
+                Opened at <u ng-bind="data.airInletPsid"></u> psid
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" ng-checked="data.airInlet === 'Did not open' ? true : false">
+              <label>
+                <span></span>
+                Did not open
+              </label>
+            </li>
+          </ul>
+        </td>
+        <td  style="border-right: 2px solid #333 !important;">
+          <ul style="padding:0; margin-bottom:0" class="list-inline">
+            <li>
+              <input type="checkbox" ng-checked="data.ckValve === 'Held' ? true : false">
+              <label>
+                <span></span>
+                Held at <u ng-bind="data.ckValvePsid"></u> psid
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" ng-checked="data.ckValve === 'Leaked' ? true : false">
+              <label>
+                <span></span>
+                Leaked
+              </label>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Repairs Made/Materials Used:
+          </span>
+        </td>
+        <td colspan="2"  style="border-right: 2px solid #333 !important;">
+          <span ng-bind="data.ckValveRepairsMade"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">
+          <span>
+            Test After Repair:
+          </span>
+        </td>
+        <td style="width: 37%">
+          <span>
+            Air Inlet
+          </span>
+        </td>
+        <td  style="border-right: 2px solid #333 !important;">
+          <span>
+            Check Valve
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" ng-checked="data.airInlet === 'Did not open' ? true : false">
+          <label>
+            <span></span>
+            Opened at <u ng-bind="data.airInletPsidFinal"></u> psid
+          </label>
+        </td>
+        <td  style="border-right: 2px solid #333 !important;">
+          <input type="checkbox" ng-checked="data.ckValve === 'Did not open' ? true : false">
+          <label>
+            <span></span>
+            Held at <u ng-bind="data.ckValveFinalPsid"></u> psid
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="font-size: 9px">
+    <strong style="font-size: 11px">Air Gap Inspection: </strong>
+    <span>Required minumun air gap separation provided?</span>
+    <input type="checkbox" ng-checked="data.minAirGap === 'Yes' ? true : false"><label><span></span>Yes</label>
+    <input type="checkbox" ng-checked="data.minAirGap === 'No' ? true : false"><label><span></span>No</label>
+  </div>
+  <table class="table table-condensed tabla-rich min-margin">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10"></th>
+      </tr>
+    </thead>
+    <tbody class="blue-body-top">
+      <tr>
+        <td style="width:35%">
+          <span style="display:block;">
+            Test guage used:
+          </span>
+        </td>
+        <td style="width: 15%;">
+          <span style="display:block;">
+            Make:
+          </span>
+          <span ng-bind="data.makeGuage"></span>
+        </td>
+        <td  style="width: 15%;">
+          <span style="display:block;">
+            Model:
+          </span>
+          <span ng-bind="data.modelGuage"></span>
+        </td>
+        <td>
+          <span style="display:block;">
+            Serial Number:
+          </span>
+          <span ng-bind="data.serialGuage"></span>
+        </td>
+        <td style="width: 15%;">
+          <span style="display:block;">
+            Calibration Date:
+          </span>
+          <span ng-bind="data.calibDateGuage"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

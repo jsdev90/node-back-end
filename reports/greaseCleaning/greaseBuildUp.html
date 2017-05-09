@@ -1,0 +1,111 @@
+<section>
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Grease Accumulation</th>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <th>
+          <span>None</span>
+        </th>
+        <th>
+          <span>Acceptable 50 Microns</span>
+        </th>
+        <th>
+          <span>Cleaning Required 2000 Microns</span>
+        </th>
+        <th>
+          <span>Critical Depth 3175 Microns</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span>Grease build-up on filters</span>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseFilters === 'None'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseFilters === 'Acceptable / low'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseFilters === 'Cleaning required / medium'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseFilters === 'Critical depth / high'"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Grease build-up in hood</span>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseHood === 'None'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseHood === 'Acceptable / low'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseHood === 'Cleaning required / medium'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseHood === 'Critical depth / high'"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Grease build-up in ductwork</span>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseDuctWork === 'None'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseDuctWork === 'Acceptable / low'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseDuctWork === 'Cleaning required / medium'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseDuctWork === 'Critical depth / high'"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Grease build-up on fan</span>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseFan === 'None'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseFan === 'Acceptable / low'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseFan === 'Cleaning required / medium'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseFan === 'Critical depth / high'"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Grease build-up on roof</span>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseRoof === 'None'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseRoof === 'Acceptable / low'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseRoof === 'Cleaning required / medium'"></i>
+        </td>
+        <td class="text-center">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.greaseRoof === 'Critical depth / high'"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

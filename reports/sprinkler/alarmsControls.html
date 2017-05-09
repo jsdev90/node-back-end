@@ -1,0 +1,209 @@
+<section>
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Alarms/Controls
+        </th>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <span>Yes:</span>
+        </td>
+        <td class="short-column">
+          <span>No:</span>
+        </td>
+        <td class="short-column">
+          <span>N/A</span>
+        </td>
+        <td class="short-column">
+          <span>Freq.</span>
+        </td>
+        <td>
+          <span></span>
+        </td>
+        <td style="width:35%">
+          <span>Notes</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest01 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest01 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest01 === 'N/A'"></i>
+        </td>
+        <td><span>Q</span></td>
+        <td>
+          <span>Is there a fire pump for this property?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest01Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5']) && data.inspQuest01 === 'Yes'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest02 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest02 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest02 === 'N/A'"></i>
+        </td>
+        <td><span>Q</span></td>
+        <td>
+          <span>Does the pump appear to be in good external condition?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest02Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['Q','S','A','3','5']) && data.inspQuest01 === 'Yes'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest03 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest03 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest03 === 'N/A'"></i>
+        </td>
+        <td><span>Q</span></td>
+        <td>
+          <span>Has the pump been flow tested using a hose stream or hose meter in the past 12 months?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest03Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5']) && data.inspQuest01 === 'Yes'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>Q</td>
+        <td>
+          <span>Where does the fire pump get its water from? <u ng-bind="data.inspQuest04 !== 'Other' ? data.inspQuest04 : data.inspQuest04Other"></u></span>
+        </td>
+        <td><span ng-bind="data.inspQuest04Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest05 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest05 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest05 === 'N/A'"></i>
+        </td>
+        <td>A</td>
+        <td>
+          <span>Are all sprinkler control valves in the appropiate open or closed position?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest05Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest06 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest06 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest06 === 'N/A'"></i>
+        </td>
+        <td>S</td>
+        <td>
+          <span>Did the supervisory alarms operate properly?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest06Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest07 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest07 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest07 === 'N/A'"></i>
+        </td>
+        <td>A</td>
+        <td>
+          <span>Are all sprinkler control valves sealed or supervised in their respective open or closed position?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest07Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest08 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest08 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest08 === 'N/A'"></i>
+        </td>
+        <td>A</td>
+        <td>
+          <span>Are cold weather valves on this property?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest08Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5']) && data.inspQuest08 === 'Yes'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest09 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest09 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest09 === 'N/A'"></i>
+        </td>
+        <td>A</td>
+        <td>
+          <span>Are all cold weather valves in their appropiate open or closed positions?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest09Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5']) && data.inspQuest08 === 'Yes'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest10 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest10 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest10 === 'N/A'"></i>
+        </td>
+        <td>A</td>
+        <td>
+          <span>If cold weather valves have been closed, has the piping been drained?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest10Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5']) && data.inspQuest08 === 'Yes'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest11 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest11 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest11 === 'N/A'"></i>
+        </td>
+        <td>A</td>
+        <td>
+          <span>Has the owner or owner's representative been advised that cold weather valves are not recommended by the NFPA</span>
+        </td>
+        <td><span ng-bind="data.inspQuest11Note"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

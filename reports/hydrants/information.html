@@ -1,0 +1,45 @@
+<h5 class="text-center"><small>This fire hydrant report is in accordance with NFPA 25 version 2014</small></h5>
+<section>
+  <table class="table table-condensed tabla-rich">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          <strong>Hydrant Information</strong>
+          <small>- Annual inspection frequency</small>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="blue-body-top">
+      <tr>
+        <td colspan="2">
+          <strong>
+            Location:
+          </strong>
+          <span>
+            {{data.hydLocation}}
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%">
+          <strong>Manufacturer:</strong>
+          <span>  {{data.hydMake}}</span>
+        </td>
+        <td>
+          <strong>Model:</strong>
+          <span>{{data.hydModel}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%">
+          <strong>Hydrant Number:</strong>
+          <span>{{data.hydNumber}}</span>
+        </td>
+        <td>
+          <strong>Type:</strong>
+          <span>{{data.hydType}}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

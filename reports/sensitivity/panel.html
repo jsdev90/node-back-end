@@ -1,0 +1,59 @@
+<section>
+  <table class="table  table-condensed tabla-rich">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Control Panel</th>
+      </tr>
+    </thead>
+    <tbody  class="blue-body-top">
+      <tr>
+        <td>
+          <strong>
+            Location:
+          </strong>
+          <span ng-bind="data.location"></span>
+        </td>
+        <td style="width:25%">
+          <strong>
+            Manufacturer:
+          </strong>
+          <span ng-bind="data.make"></span>
+        </td>
+        <td style="width:25%">
+          <strong>
+            Model:
+          </strong>
+          <span ng-bind="data.model"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            How were the smoke detectors tested?
+          </strong>
+          <span ng-bind="data.testSmokeDetect"></span>
+        </td>
+        <td colspan="2">
+          <strong>
+            Smoke detector testing instrument make?
+          </strong>
+          <span ng-bind="data.atDeviceQ1"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            Smoke detector testing instrument model?
+          </strong>
+          <span ng-bind="data.atDeviceQ2"></span>
+        </td>
+        <td colspan="2">
+          <strong>
+            Smoke detector testing instrument calibration date?
+          </strong>
+          <span ng-bind="data.atDeviceQ3"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

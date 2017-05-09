@@ -1,0 +1,123 @@
+<section>
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          <p>Terms of this agreement are:</p>
+          <ul class="list-inline">
+            <li>
+              <input type="checkbox" ng-checked="data.term.type === 'time'">
+              <label>
+                <span></span>
+                Time and Materials
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" ng-checked="data.term.type === 'fixed'">
+              <label>
+                <span></span>
+                Fixed Price of
+                <u ng-if="data.term.type === 'fixed'" ng-bind="data.term.price | currency"></u>
+                <u ng-if="data.term.type !== 'fixed'"></u>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" ng-checked="data.term.type === 'notExceed'">
+              <label>
+                <span></span>
+                Price not to exceed
+                <u ng-if="data.term.type === 'notExceed'" ng-bind="data.term.price | currency"></u>
+                <u ng-if="data.term.type !== 'notExceed'"></u>
+              </label>
+            </li>
+          </ul>
+        </th>
+      </tr>
+      <tr>
+        <th style="width: 50%">Item description or employee name</th>
+        <th style="width: 16.6%">Quantity</th>
+        <th style="width: 16.6%">Unit Price</th>
+        <th style="width: 16.6%">Extended Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="work in data.works track by $index">
+        <td>
+          <span ng-bind="work.name"></span>
+          <span ng-if="work.isLabor"> (Labor)</span>
+        </td>
+        <td ng-bind="work.quantity"></td>
+        <td class="active">
+          <span ng-if="data.term.type !== 'fixed'" ng-bind="work.price | currency"></span>
+          <span ng-if="data.term.type === 'fixed'">&nbsp;</span>
+        </td>
+        <td>
+          <span ng-if="data.term.type !== 'fixed'" ng-bind="(work.price * work.quantity) | currency"></span>
+          <span ng-if="data.term.type === 'fixed'">&nbsp;</span>
+        </td>
+      </tr>
+      <tr ng-if="work != null" ng-repeat="work in padding track by $index">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="active">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+          <p>Authorized customer signature: </p>
+          <img ng-src="{{data.ownerSignature}}" alt="" width="100" >
+        </td>
+        <td class="active">
+          Labor and other subtotal
+        </td>
+        <td class="active">
+          <span ng-if="data.term.type !== 'fixed'" ng-bind="data.laborSubtotal() | currency"></span>
+          <span ng-if="data.term.type === 'fixed'">&nbsp;</span>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          <span>Name of person signing: </span>
+          <div>&nbsp;</div>
+          <u ng-bind="data.custInfo.contactName"></u>
+        </td>
+        <td class="active">
+          Material sub total
+        </td>
+        <td class="active">
+          <span ng-if="data.term.type !== 'fixed'" ng-bind="data.materialsSubtotal() | currency"></span>
+          <span ng-if="data.term.type === 'fixed'">&nbsp;</span>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="active">
+          <span>State Tax</span>
+          <strong>({{data.taxPercentage | percentage}})</strong>
+        </td>
+        <td class="active">
+          <span ng-if="data.term.type !== 'fixed'" ng-bind="data.tax() | currency"></span>
+          <span ng-if="data.term.type === 'fixed'">&nbsp;</span>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          <span>Date of order: </span>
+          <div>&nbsp;</div>
+          <u ng-bind="data.modifiedAt"></u>
+        </td>
+        <td class="active" rowspan="2">
+          <strong>Total Due this invoice</strong>
+        </td>
+        <td class="active" rowspan="2">
+          <span ng-if="data.term.type !== 'notExceed' && data.term.type !== 'fixed'" ng-bind="data.total() | currency"></span>
+          <span ng-if="data.term.type === 'fixed'" ng-bind="data.term.price | currency"></span>
+          <span ng-if="data.term.type === 'notExceed'" ng-bind="data.totalExceed(data.term.price) | currency"></span>
+        </td>
+        <td rowspan="2"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

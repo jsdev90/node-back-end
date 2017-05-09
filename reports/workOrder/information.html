@@ -1,0 +1,26 @@
+<section style="margin: -15px 0 0 0">
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr>
+        <th>Order / Invoice Number</th>
+        <th>Customer P.O NO.</th>
+        <th>Technician</th>
+        <th>Invoice Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td ng-bind="data.invoiceNumber"></td>
+        <td ng-bind="data.customerPO"></td>
+        <td ng-bind="data.technician"></td>
+        <td ng-bind="data.modifiedAt"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section>
+  <div class="header">
+    Work description:
+  </div>
+  <p ng-bind="data.description"></p>
+</section>

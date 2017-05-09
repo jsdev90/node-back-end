@@ -1,0 +1,148 @@
+<div ng-repeat="stand in data.standpipes track by $index">
+  <section>
+    <table class="table  tabla-rich table-condensed blue-headers">
+      <thead>
+        <tr class="table-header">
+          <th colspan="10">
+            Standpipe {{$index + 1}}
+          </th>
+        </tr>
+        <tr>
+          <td class="short-column">
+            <span>Yes</span>
+          </td>
+          <td class="short-column">
+            <span>No</span>
+          </td>
+          <td class="short-column">
+            <span>N/A</span>
+          </td>
+          <td class="short-column">
+            <span>Freq.</span>
+          </td>
+          <td style=""></td>
+          <td style="width:35%">
+            <span>Notes</span>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">A</td>
+          <td>
+            <span>Location of standpipe <u ng-bind="stand.location"></u></span>
+          </td>
+          <td ng-bind="stand.locationNote"></td>
+        </tr>
+
+        <tr ng-if="validate(['5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="stand.hydrostaticTest === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="stand.hydrostaticTest === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="stand.hydrostaticTest === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A/5</td>
+
+          <td>
+            <span>Were the standpipes hydrostatic test done? (Manual dry only)</span>
+          </td>
+
+          <td ng-bind="stand.hydrostaticTestNote"></td>
+
+        </tr>
+
+        <tr ng-if="validate(['5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="stand.flowTest === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="stand.flowTest === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="stand.flowTest === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A/5</td>
+
+          <td>
+            <span>Were the standpipes flow test performed? (Automatic only)</span>
+          </td>
+
+          <td ng-bind="stand.flowTestNote"></td>
+
+        </tr>
+
+        <tr ng-if="validate(['5'])">
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">5</td>
+          <td>
+            <span>Standpipe flow test static pressure? <u ng-bind="stand.flowTestStatic"></u></span>
+          </td>
+          <td ng-bind="stand.flowTestStaticNote"></td>
+        </tr>
+        <tr ng-if="validate(['5'])">
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">5</td>
+          <td>
+            <span>Standpipe flow test total flow GMP? <u ng-bind="stand.flowTestGMP"></u></span>
+          </td>
+          <td ng-bind="stand.flowTestGMPNote"></td>
+        </tr>
+        <tr ng-if="validate(['5'])">
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+          <td class="short-column">5</td>
+          <td>
+            <span>Standpipe flow test pressure at topmost outlet? <u ng-bind="stand.flowTestTopmost"></u></span>
+          </td>
+          <td ng-bind="stand.flowTestTopmostNote"></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

@@ -1,0 +1,60 @@
+<h5 class="text-center"><small>This fire sprinkler report is in accordance with NFPA 25 version 2014</small></h5>
+<section ng-if="data.monitoring.exists === 'Yes'">
+  <div class="header">
+    Monitoring Information
+  </div>
+  <table class="table  table-condensed tabla-rich">
+    <tbody>
+      <tr>
+        <td style="border-top: 1px solid #999; width: 50%">
+          <span>Name of monitoring company:</span>
+          <span ng-bind="data.monitoring.name"></span>
+        </td>
+        <td style="border-top: 1px solid #999">
+          <span>Phone number:</span>
+          <span ng-bind="data.monitoring.phone"></span>
+        </td>
+        <td style="border-top: 1px solid #999">
+          <span>Account #:</span>
+          <span ng-bind="data.monitoring.account"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section style="position:relative; margin-top:  22px;">
+  <div class="header" style="position:absolute; top:-8px; left: 0;">System Information</div>
+  <table class="table  table-condensed tabla-rich">
+    <thead>
+      <tr class="no-borders">
+        <th colspan="5" class="no-borders">
+        </th>
+        <th colspan="3" class="text-center blue-headers" style="border-bottom: 1px solid #fff; padding: 3px 1px !important;">
+          Flow Test Pressure
+        </th>
+      </tr>
+      <tr>
+        <td class="blue-headers border-white" style="width:20%; ">Type</td>
+        <td class="blue-headers border-white" style="width:35%; ">Location</td>
+        <td class="blue-headers border-white" style="width:13%; ">Make</td>
+        <td class="blue-headers border-white" style="width:13%; ">Model</td>
+        <td class="short-column blue-headers border-white" style="">Size</td>
+        <td class="short-column blue-headers border-white" style="">Static</td>
+        <td class="short-column blue-headers border-white" style="">Flow</td>
+        <td class="short-column blue-headers" style="border-top: 1px solid #999">Residual</td>
+      </tr>
+    </thead>
+    <tbody ng-repeat="riserObj in data.risers track by $index" style="border-top: 1px solid #999">
+      <tr ng-repeat="riser in riserObj track by $index">
+        <td><span ng-bind="riser.type"></span></td>
+        <td><span ng-bind="riser.location"></span></td>
+        <td><span ng-bind="riser.make"></span></td>
+        <td><span ng-bind="riser.model"></span></td>
+        <td><span ng-bind="riser.size"></span></td>
+        <td><span ng-bind="riser.staticPressure | limitTo:3"></span></td>
+        <td><span ng-bind="riser.drainPressure"></span></td>
+        <td><span ng-bind="riser.residualPressure"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

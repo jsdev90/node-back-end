@@ -1,0 +1,119 @@
+<section>
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          System Information<small> — Annual testing frequency</small>
+        </th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          <span>Yes</span>
+        </th>
+        <th class="short-column">
+          <span>No</span>
+        </th>
+        <th class="short-column">
+          <span>N/A</span>
+        </th>
+        <th>
+          <span></span>
+        </th>
+        <th style="width:35%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.systemOperational === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.systemOperational === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.systemOperational === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Was system in operation upon arrival?</span>
+        </td>
+        <td><span ng-bind="data.systemOperationalNote"></span></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.panelCondition === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.panelCondition === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.panelCondition === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Is panel and surrounding equipment, conduit and wiring well secured and in good condition?</span>
+        </td>
+        <td><span ng-bind="data.panelConditionNote"></span></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.lampsOperational === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.lampsOperational === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.lampsOperational === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Are all lamps and displays operationg correctly?</span>
+        </td>
+        <td><span ng-bind="data.lampsOperationalNote"></span></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.drawingsAvailable === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.drawingsAvailable === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.drawingsAvailable === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Are drawings and wiring diagrams available at the panel?</span>
+        </td>
+        <td><span ng-bind="data.drawingsAvailableNote"></span></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.instructionsPosted === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.instructionsPosted === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.instructionsPosted === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Are operating instructions posted or available at the panel?</span>
+        </td>
+        <td><span ng-bind="data.instructionsPostedNote"></span></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.zonesLabeled === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.zonesLabeled === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.zonesLabeled === 'N/A'"></i>
+        </td>
+        <td>
+          <span>Are zones labeled and identified?</span>
+        </td>
+        <td><span ng-bind="data.zonesLabeledNote"></span></td>
+      </tr>
+    </tbody>
+</section>

@@ -1,0 +1,396 @@
+<div ng-repeat="hose in data.hoseCabinets track by $index">
+  <section>
+    <table class="table  tabla-rich table-condensed blue-headers">
+      <thead>
+        <tr class="table-header">
+          <th colspan="10">
+            Hose Cabinet {{$index + 1}}
+          </th>
+        </tr>
+        <tr>
+          <td class="short-column">
+            <span>Yes</span>
+          </td>
+          <td class="short-column">
+            <span>No</span>
+          </td>
+          <td class="short-column">
+            <span>N/A</span>
+          </td>
+          <td class="short-column">
+            <span>Freq.</span>
+          </td>
+          <td></td>
+          <td style="width: 35%;">
+            <span>Notes</span>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Location of hose cabinet {{$index + 1}} <u ng-bind="hose.location"></u></span>
+          </td>
+
+          <td ng-bind="hose.locationNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.cabinetVisible === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.cabinetVisible === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.cabinetVisible === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Is the hose cabinet visible and accesible?</span>
+          </td>
+
+          <td ng-bind="hose.cabinetVisibleNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.cabinetFreeOfDamage === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.cabinetFreeOfDamage === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.cabinetFreeOfDamage === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Is the hose cabinet free of damage and corrosion?</span>
+          </td>
+
+          <td ng-bind="hose.cabinetFreeOfDamageNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.looksFunctional === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.looksFunctional === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.looksFunctional === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Is the look functional and are the contents present and accesible?</span>
+          </td>
+
+          <td ng-bind="hose.looksFunctionalNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.hoseCabFreeOfDamage === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.hoseCabFreeOfDamage === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.hoseCabFreeOfDamage === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Is the hose free of damage and the couplings and gaskets in good condition?</span>
+          </td>
+
+          <td ng-bind="hose.hoseCabFreeOfDamageNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.hoseProperlyRacked === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.hoseProperlyRacked === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.hoseProperlyRacked === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Is the hose properly racked or rolled?</span>
+          </td>
+
+          <td ng-bind="hose.hoseProperlyRackedNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.hoseSwing === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.hoseSwing === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.hoseSwing === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Will the hose swing out at leat 90 degrees?</span>
+          </td>
+
+          <td ng-bind="hose.hoseSwingNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.isHoseReRacked === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.isHoseReRacked === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.isHoseReRacked === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Is the hose re-racked with the folds in a different position?</span>
+          </td>
+
+          <td ng-bind="hose.isHoseReRackedNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.hoseReplaced === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.hoseReplaced === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.hoseReplaced === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">5/3</td>
+
+          <td>
+            <span>Was the hose hydrostatically tested or replaced?</span>
+          </td>
+
+          <td ng-bind="hose.hoseReplacedNote"></td>
+
+        </tr>
+      </table>
+      </tbody>
+  </section>
+</div>
+
+<div ng-repeat="hose in data.hoseStations track by $index">
+  <section>
+    <table class="table  tabla-rich table-condensed blue-headers">
+      <thead>
+        <tr class="table-header">
+          <th colspan="10">
+            Hose Station {{$index + 1}}
+          </th>
+        </tr>
+        <tr>
+          <td class="short-column">
+            <span>Yes</span>
+          </td>
+
+          <td class="short-column">
+            <span>No</span>
+          </td>
+
+          <td class="short-column">
+            <span>N/A</span>
+          </td>
+
+          <td class="short-column">
+            <span>Freq.</span>
+          </td>
+
+          <td></td>
+
+          <td style="width: 35%;">
+            <span>Notes</span>
+          </td>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Location of hose system {{$index + 1}} <u ng-bind="hose.location"></u></span>
+          </td>
+
+          <td ng-bind="hose.locationNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.freeOfDamage === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.freeOfDamage === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.freeOfDamage === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Is the hose free of damage and the couplings and gaskets in good condition?</span>
+          </td>
+
+          <td ng-bind="hose.freeOfDamageNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.hoseRacked === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.hoseRacked === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.hoseRacked === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Is the hose properly racked or rolled?</span>
+          </td>
+
+          <td ng-bind="hose.hoseRackedNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.hoseReRacked === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.hoseReRacked === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if=" === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Is the hose re-racked with the folds in a different position?</span>
+          </td>
+
+          <td ng-bind="hose.hoseReRackedNote"></td>
+
+        </tr>
+        <tr ng-if="validate(['A','3','5'])">
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="hose.hydroTested === 'Yes'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="hose.hydroTested === 'No'"></i>
+          </td>
+
+          <td class="short-column">
+            <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="hose.hydroTested === 'N/A'"></i>
+          </td>
+
+          <td class="short-column">A</td>
+
+          <td>
+            <span>Were the hoses hydrostatically tested or replaced?</span>
+          </td>
+
+          <td ng-bind="hose.hydroTestedNote"></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>

@@ -1,0 +1,59 @@
+<table class="table tabla-rich table-condensed blue-headers">
+  <thead>
+    <tr class="table-header">
+      <th colspan="10">
+        <span>Alarm / Supervisory / Trouble</span>
+      </th>
+    </tr>
+    <tr>
+      <th style="width: 50%;">
+        <span>
+          Description
+        </span>
+      </th>
+      <th style="width: 50%;">
+        <span>
+          Notes
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 50%">
+        <span ng-repeat="device in devices['Alarm signal']">
+          Device used to test alarm signal: <u ng-bind="device.name"></u><br>
+        </span>
+      </td>
+      <td style="width: 50%">
+        <span>
+
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 50%">
+        <span ng-repeat="device in devices['Supervisory signal']">
+          Device used to test supervisory signal: <u ng-bind="device.name"></u>
+        </span>
+      </td>
+      <td style="width: 50%">
+        <span>
+
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 50%">
+        <span>
+          Trouble supervision? <u ng-bind="data.troubleSupervision"></u>
+        </span>
+      </td>
+      <td style="width: 50%">
+        <span>
+
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

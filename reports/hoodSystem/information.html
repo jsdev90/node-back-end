@@ -1,0 +1,48 @@
+<h5 class="text-center"><small>This hood service report is in accordance with NFPA 17A version 2013</small></h5>
+<section ng-if="data.monitoring.exists === 'Yes'">
+  <div class="header">Monitoring Information</div>
+  <table class="table table-condensed tabla-rich">
+    <tbody>
+      <tr>
+        <td style="width: 50%">
+          <strong>Name of monitoring company:</strong>
+          <span>&nbsp;</span>
+          <span ng-bind="data.monitoring.name"></span>
+        </td>
+        <td>
+          <strong>Phone number:</strong>
+          <span>&nbsp;</span>
+          <span ng-bind="data.monitoring.phone"></span>
+        </td>
+        <td>
+          <strong>Account #:</strong>
+          <span>&nbsp;</span>
+          <span ng-bind="data.monitoring.account"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section>
+  <div class="header">System Information</div>
+  <table class="table  table-condensed tabla-rich">
+    <tbody>
+      <tr>
+        <td colspan="3" class="blue-body-top">
+          <strong>Location of hood system: </strong>
+          <span ng-bind="data.hoodLocation"></span>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%">
+          <strong>Manufacturer: </strong>
+          <span ng-bind="data.hoodMake"></span>
+        </td>
+        <td>
+          <strong>Model: </strong>
+          <span ng-bind="data.hoodModel"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

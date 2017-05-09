@@ -1,0 +1,132 @@
+<section>
+  <table class="table table-condensed  tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Exhaust Hood<small> — {{data.frequency}} testing frequency</small></th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          <span>Yes</span>
+        </th>
+        <th class="short-column">
+          <span>No</span>
+        </th>
+        <th class="short-column">
+          <span>N/A</span>
+        </th>
+        <th class="short-column">
+          <span>Freq.</span>
+        </th>
+        <th>
+          <span></span>
+        </th>
+        <th style="width: 33%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest16 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest16 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest16 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is the hood cleaning sticker affixed?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest16Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest17 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest17 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest17 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Are the hood filters intact?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest17Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest18 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest18 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest18 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is the exhaust fan in operation order?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest18Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest19 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest19 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest19 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is the lighting in the hood properly protected from damage?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest19Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td><i class="fa fa-fw fa-minus"></i></td>
+        <td><i class="fa fa-fw fa-minus"></i></td>
+        <td><i class="fa fa-fw fa-minus"></i></td>
+        <td>&nbsp;</td>
+        <td colspan="2">
+          <span>What is the date of the last hood cleaning?</span>
+          <u ng-bind="data.lastHoodCleaning"></u>
+        </td>
+      </tr>
+      <tr>
+        <td><i class="fa fa-fw fa-minus"></i></td>
+        <td><i class="fa fa-fw fa-minus"></i></td>
+        <td><i class="fa fa-fw fa-minus"></i></td>
+        <td>&nbsp;</td>
+        <td colspan="2">
+          <span>What is the level of grease accumulation?</span>
+          <u ng-bind="data.inspecQuest20"></u>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</section>

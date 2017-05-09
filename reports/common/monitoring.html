@@ -1,0 +1,21 @@
+<section ng-show="data.monitoring.exists === 'Yes' || data.type === 'Monitoring'">
+  <div class="header">Monitoring Information</div>
+  <table class="table table-responsive table-condensed tabla-rich">
+    <tbody>
+      <tr>
+        <td style="width: 50%;">
+          <span>Name of monitoring company:</span>
+          <span ng-bind="data.monitoring.name"/>
+        </td>
+        <td class="" >
+          <span>Phone number:</span>
+          <span ng-bind="data.monitoring.phone"/>
+        </td>
+        <td class="">
+          <span>Account #:</span>
+          <span ng-bind="data.monitoring.account"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

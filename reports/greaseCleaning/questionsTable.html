@@ -1,0 +1,419 @@
+<section>
+  <table class="table blue-headers table-condensed tabla-rich">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Hood Inspection
+        </th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          <span>
+            Pass
+          </span>
+        </th>
+        <th class="short-column">
+          <span>
+            Fail
+          </span>
+        </th>
+        <th class="short-column">
+          <span>
+            N/A
+          </span>
+        </th>
+        <th class="short-column">
+          <span>Freq.</span>
+        </th>
+        <th>
+          <span>
+            &nbsp;
+          </span>
+        </th>
+        <th style="width:35%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest1 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest1 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest1 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Does exhaust hood capture all heat and cooking effluent?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest1Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest2 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest2 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest2 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Entire system interior accessible?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest2Note"></span>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest3 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest3 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest3 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Adequate access panels?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest3Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest4 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest4 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest4 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Filters conforming and in place?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest4Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest5 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest5 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest5 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Water wash hood operational?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest5Note"></span>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest6 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest6 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest6 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Hood damper operates properly?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest6Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest7 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest7 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest7 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Is the system free from dangerous or non-conforming access?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest7Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.fanQuest1 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.fanQuest1 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.fanQuest1 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Fan tippable or interior accessible?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.fanQuest1Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.fanQuest2 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.fanQuest2 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.fanQuest2 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Fan is working properly?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.fanQuest2Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.fanQuest3 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.fanQuest3 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.fanQuest3 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Is fan wiring defect free?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.fanQuest3Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green"  ng-if="data.inspecQuest8 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red"  ng-if="data.inspecQuest8 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus"  ng-if="data.inspecQuest8 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Roof around fan is free of grease build-up?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest8Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest9 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest9 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest9 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Rooftop grease containment system?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest9Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest10 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest10 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest10 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            System is liquid tight?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest10Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest11 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest11 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest11 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Entire system clean to applicable codes?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest11Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest12 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest12 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest12 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Is the system free from inaccessible areas?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest12Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-check" style="color: green" ng-if="data.inspecQuest13 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-close" style="color: red" ng-if="data.inspecQuest13 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus" ng-if="data.inspecQuest13 === 'N/A'"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            Were all areas cleaned?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest13Note"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            What is the recommended cleaning frequency per year? <u ng-bind="data.recomendedCleanFreq"></u> times per year
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.recomendedCleanFreqNote"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x fa-minus"></i>
+        </td>
+        <td class="short-column"><span ng-bind="data.frequency[0]"></span></td>
+        <td>
+          <span>
+            What is the next cleaning date? <u ng-bind="data.nextCleanDate"></u>
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.nextCleanDateNote"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,93 @@
+<h5 class="text-center"><small>This fire extinguisher report is in accordance with NFPA 10 version 2013</small></h5>
+<section>
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          <span>Fire Extinguishers</span>
+          <small> — Annual inspection frequency</small>
+        </th>
+      </tr>
+      <tr>
+        <th style="width: 25%">
+          <span>
+            Location
+          </span>
+        </th>
+        <th class="text-center" style="width: 14%;">
+          <span>
+            Serial Number
+          </span>
+        </th>
+        <th class="text-center" style="width: 4%;">
+          <span>
+            Size
+          </span>
+        </th>
+        <th class="text-center" style="width: 10%;">
+          <span>
+            Type
+          </span>
+        </th>
+        <th class="text-center" style="width: 14%;">
+          <span>
+            Service performed
+          </span>
+        </th>
+        <th class="text-center" style="width: 10%;">
+          <span>
+            Manufacture Date
+          </span>
+        </th>
+        <th class="text-center" style="width: 10%;">
+          <span>
+            6 yr Maint. <br> Due Date
+          </span>
+        </th>
+        <th class="text-center" style="width: 10%;">
+          <span>
+            Hydrotest <br>Due Date
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="info in data.extinguishers">
+        <td>
+          <span ng-bind="info.location"/>
+        </td>
+        <td>
+          <span ng-bind="info.serialNumber"/>
+        </td>
+        <td>
+          <span ng-bind="info.size"/>
+        </td>
+        <td>
+          <span ng-bind="info.type !== 'Other' ? info.type : info.typeOther"></span>
+        </td>
+        <td>
+          <span ng-bind="info.servicePerformed !== 'Other' ? info.servicePerformed : info.servicePerformedOther"/>
+        </td>
+        <td>
+          <span ng-bind="info.manufactureDate"/>
+        </td>
+        <td>
+          <span ng-bind="info.dueDate6years"/>
+        </td>
+        <td>
+          <span ng-bind="info.dueDateHydrotest"/>
+        </td>
+      </tr>
+      <tr ng-repeat="empty in padding">
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

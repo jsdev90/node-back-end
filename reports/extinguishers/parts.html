@@ -1,0 +1,10 @@
+<section>
+  <div class="header">Parts</div>
+  <ul class="device-list">
+    <li ng-repeat="part in data.parts" ng-if="part.qty && part.qty > 0">
+      <span ng-bind="part.name + ': '"></span>
+      <span ng-bind="part.qty"/>
+    </li>
+  </ul>
+  <div class="clearfix"></div>
+</section>

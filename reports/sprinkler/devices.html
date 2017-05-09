@@ -1,0 +1,62 @@
+<section ng-repeat="(key, group) in groupedDevices track by $index">
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          {{key}} <small> — Quaterly testing frequency</small>
+        </th>
+      </tr>
+      <tr>
+        <th class=" short-column">
+          <span>Pass</span>
+        </th>
+        <th class=" short-column">
+          <span>Fail</span>
+        </th>
+        <th style="width: 55%" ng-if="group[0].group">
+          <span>Quantity</span>
+        </th>
+        <th style="width: 30%" ng-if="!group[0].group">
+          <span>Location</span>
+        </th>
+        <th style="width: 15%" ng-if="!group[0].group">
+          <span>Make</span>
+        </th>
+        <th class="short-column" ng-if="!group[0].group">
+          <span>Model</span>
+        </th>
+        <th style="width: 35%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="device in group track by $index">
+        <td class=" short-column">
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="device.status === 'Pass'"></i>
+          <i class="fa fa-fw fa-minus" ng-if="device.status === 'N/A'"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="device.status === 'Fail'"></i>
+          <i class="fa fa-fw fa-minus" ng-if="device.status === 'N/A'"></i>
+        </td>
+        <td class="" ng-if="!device.group" style="width: 30%">
+          <span ng-bind="($index + 1) + '. ' + device.location"></span>
+        </td>
+        <td class="" ng-if="!device.group" style="width: 20%">
+          <span ng-bind="device.make"></span>
+        </td>
+        <td class="" ng-if="!device.group">
+          <span ng-bind="device.model"></span>
+        </td>
+        <td class="" ng-if="device.group">
+          <span ng-bind="device.quantity"></span>
+        </td>
+        <td class="" style="width: 35%">
+          <span>{{device.statusNote}}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>

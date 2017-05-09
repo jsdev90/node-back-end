@@ -1,0 +1,111 @@
+<section>
+  <table class="table table-condensed  tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Cooking Information<small> — {{data.frequency}} testing frequency</small></th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          <span>Yes</span>
+        </th>
+        <th class="short-column">
+          <span>No</span>
+        </th>
+        <th class="short-column">
+          <span>N/A</span>
+        </th>
+        <th class="short-column">
+          <span>Freq.</span>
+        </th>
+        <th>
+          <span></span>
+        </th>
+        <th style="width: 33%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest21 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest21 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest21 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is there 16 inches separation between fryer and surface flame equipment?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest21Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest22 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest22 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest22 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is there a barrier installed between the fryer and the surface flame equipment?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest22Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest23 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest23 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest23 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Does the equipment appear to be in operable condition?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest23Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest24 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest24 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest24 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Are there combustibles stored near the cooking equipment?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest24Note"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

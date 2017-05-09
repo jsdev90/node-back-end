@@ -1,0 +1,376 @@
+<table class="table table-condensed tabla-rich blue-headers">
+  <thead>
+    <tr class="table-header">
+      <th colspan="10"></th>
+    </tr>
+    <tr>
+      <th class="short-column">
+        <span>
+          Yes
+        </span>
+      </th>
+      <th class="short-column">
+        <span>
+          No
+        </span>
+      </th>
+      <th class="short-column">
+        <span>
+          N/A
+        </span>
+      </th>
+      <th>
+        <span>
+          &nbsp;
+        </span>
+      </th>
+      <th style="width: 35%">
+        <span>
+          Notes
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.capsInPlace === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.capsInPlace === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.capsInPlace === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Are the hydrant caps in place?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.capsInPlaceNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.capsReplaced === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.capsReplaced === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.capsReplaced === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Were any caps replaced in this inspection?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.capsReplacedNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.capsGreased === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.capsGreased === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.capsGreased === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Were all the caps greased this inspection?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.capsGreasedNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.capsChainsInPlace === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.capsChainsInPlace === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.capsChainsInPlace === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Were all the caps chains in place?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.capsChainsInPlaceNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.capsChainsReplaced === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.capsChainsReplaced === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.capsChainsReplaced === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Were any cap chains replaced this inspection?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.capsChainsReplacedNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.paintedProperly === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.paintedProperly === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.paintedProperly === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Was the hydrant painted properly?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.paintedProperlyNote"></span>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.paintedInInspection === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.paintedInInspection === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.paintedInInspection === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Was the hydrant repainted in this inspection?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.paintedInInspectionNote"></span>
+      </td>
+    </tr>
+
+    <tr ng-if="data.hydType === 'Dry Barrel">
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.dryBarrelOperatingNutFunctioning === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.dryBarrelOperatingNutFunctioning === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.dryBarrelOperatingNutFunctioning === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Is the dry barrel operating nut functioning properly?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.dryBarrelOperatingNutFunctioningNote"></span>
+      </td>
+    </tr>
+
+    <tr ng-if="data.hydType === 'Dry Barrel">
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.dryBarrelOperatingNutGreased === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.dryBarrelOperatingNutGreased === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.dryBarrelOperatingNutGreased === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Was the dry barrel operating nut greased?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.dryBarrelOperatingNutGreasedNote"></span>
+      </td>
+    </tr>
+
+    <tr ng-if="data.hydType === 'Dry Barrel">
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.dryBarrelOperatingNutReplaced === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.dryBarrelOperatingNutReplaced === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.dryBarrelOperatingNutReplaced === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Was the dry barrel operating nut replaced?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.dryBarrelOperatingNutReplacedNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.nozzlesCondition === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.nozzlesCondition === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.nozzlesCondition === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Were the hydrant nozzles in good condition?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.nozzlesConditionNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.nozzlesThreadsCleaned === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.nozzlesThreadsCleaned === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.nozzlesThreadsCleaned === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Were the hydrant nozzles threads cleaned?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.nozzlesThreadsCleanedNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.nozzlesLubricated === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.nozzlesLubricated === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.nozzlesLubricated === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Were the hydrant nozzles lubricated?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.nozzlesLubricatedNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-check" style="color: green" ng-if="data.hydFlushed === 'Yes'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-close" style="color: red" ng-if="data.hydFlushed === 'No'"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus" ng-if="data.hydFlushed === 'N/A'"></i>
+      </td>
+      <td>
+        <span>
+          Was the hydrant flushed?
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.hydFlushedNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus"></i>
+      </td>
+      <td>
+        <span>
+          What was the hydrant static PSI? <u ng-bind="data.staticPsi"></u>
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.staticPsiNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus"></i>
+      </td>
+      <td>
+        <span>
+          What was the hydrant flow PSI? <u ng-bind="data.flowPsi"></u>
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.flowPsiNote"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus"></i>
+      </td>
+      <td class="short-column">
+        <i class="fa fa-fw fa-minus"></i>
+      </td>
+      <td>
+        <span>
+          What was the hydrant residual PSI? <u ng-bind="data.residualPsi"></u>
+        </span>
+      </td>
+      <td>
+        <span ng-bind="data.residualPsiNote"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>

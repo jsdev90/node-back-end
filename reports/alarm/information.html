@@ -1,0 +1,274 @@
+<h5 class="text-center"><small>This alarm report is in accordance with NFPA 72 version 2016</small></h5>
+<ng-include src="'/static/common/monitoring.html'"></ng-include>
+<section ng-repeat="panel in data.controlPanels track by $index">
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">{{panel.type}} Panel #{{$index + 1}} <small> — {{data.frequency}} testing frequency</small></th>
+      </tr>
+      <tr>
+        <th class=" short-column">
+          <span>Pass</span>
+        </th>
+
+        <th class=" short-column">
+          <span>Fail</span>
+        </th>
+
+        <th class="short-column">
+          <span>N/A</span>
+        </th>
+
+        <th class="">
+          <span>Description</span>
+        </th>
+
+        <th style="width: 35%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class="">
+          <span ng-bind="'Location: ' + panel.location"></span>
+        </td>
+        <td class="">
+          <span ng-bind="panel.locationNote"></span>
+        </td>
+      </tr>
+      `<tr>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class="">
+          <span ng-bind="'Make: ' + panel.make"></span>
+        </td>
+        <td class="">
+          <span ng-bind="panel.makeNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class="">
+          <span ng-bind="'Model: ' + panel.model"></span>
+        </td>
+        <td class="">
+          <span ng-bind="panel.modelNote"></span>
+        </td>
+      </tr>`
+
+      <tr>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="panel.operateProperly === 'Yes'"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="panel.operateProperly === 'No'"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus" ng-if="panel.operateProperly === 'N/A'"></i>
+        </td>
+        <td class="">
+          <span>Panel</span>
+        </td>
+        <td class="">
+          <span ng-bind="panel.operateProperlyNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class="">
+          <span>Remote annunciators? </span><u ng-bind="panel.remoteAnnunciator"></u>
+        </td>
+        <td class="">
+          <span ng-bind="panel.remoteAnnunciatorNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="panel.lampTest === 'Yes'"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="panel.lampTest === 'No'"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus" ng-if="panel.lampTest === 'N/A'"></i>
+        </td>
+        <td class="">
+          <span>Panel lamp test</span>
+        </td>
+        <td class="">
+          <span ng-bind="panel.lampTestNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="panel.chargingCircuit === 'Yes'"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="panel.chargingCircuit === 'No'"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus" ng-if="panel.chargingCircuit === 'N/A'"></i>
+        </td>
+        <td class="">
+          <span>Panel charging circuit</span>
+        </td>
+        <td class="">
+          <span ng-bind="panel.chargingCircuitNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="panel.panelSignalsReceived === 'Yes'"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="panel.panelSignalsReceived === 'No'"></i>
+        </td>
+        <td class=" short-column">
+          <i class="fa fa-fw fa-minus" ng-if="panel.panelSignalsReceived === 'N/A'"></i>
+        </td>
+        <td class="">
+          <span>Were all monitoring panel signal received?</span>
+        </td>
+        <td class="">
+          <span ng-bind="panel.panelSignalsReceivedNote"></span>
+        </td>
+        <tr>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-check" style="color: green" ng-if="panel.troubleSupervision === 'Yes'"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-close" style="color: red" ng-if="panel.troubleSupervision === 'No'"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus" ng-if="panel.troubleSupervision === 'N/A'"></i>
+          </td>
+          <td class="">
+            <span>Trouble supervision</span>
+          </td>
+          <td class="">
+            <span ng-bind="panel.troubleSupervisionNote"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class="">
+            <span>Panel battery <u ng-bind="panel.batteryVolts"></u> volts <u ng-bind="panel.batteryAmps"></u> amps</span>
+          </td>
+          <td class="">
+            <span ng-bind="panel.batteryAmpsNote"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class="">
+            <span>Panel battery quantity <u ng-bind="panel.batteryQuantity"></u></span>
+          </td>
+          <td class="">
+            <span ng-bind="panel.batteryQuantityNote"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class="">
+            <span>Panel battery voltage with power on <u ng-bind="panel.voltageOn"></u></span>
+          </td>
+          <td class="">
+            <span ng-bind="panel.voltageOnNote"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class="">
+            <span>Panel battery voltage with power off and under load? <u ng-bind="panel.voltageOff"></u></span>
+          </td>
+          <td class="">
+            <span ng-bind="panel.voltageOffNote"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class=" short-column">
+            <i class="fa fa-fw fa-minus"></i>
+          </td>
+          <td class="">
+            <span>Did batteries maintain proper voltage during 5 minute load test?
+              <u ng-bind="panel.properVoltDuring5min"></u></span>
+          </td>
+          <td class="">
+            <span ng-bind="panel.properVoltDuring5minNote"></span>
+          </td>
+        </tr>
+      </tr>
+    </tbody>
+  </table>
+</section>

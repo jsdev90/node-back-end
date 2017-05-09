@@ -1,0 +1,1036 @@
+<section>
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          <strong style="font-size: 14px">Fire Pump Inspection / Testing</strong>
+        </th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          Yes
+        </th>
+        <th class="short-column">
+          No
+        </th>
+        <th class="short-column">
+          N/A
+        </th>
+        <th class="short-column">
+          Freq.
+        </th>
+        <th></th>
+        <th style="width:35%">
+          Notes
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Pump start pressure <u ng-bind="data.inspQuest01"></u> psi
+        </td>
+        <td ng-bind="data.inspQuest01Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Pump stop pressure <u ng-bind="data.inspQuest02"></u> psi
+        </td>
+        <td ng-bind="data.inspQuest02Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Pressure maintenance pump start pressure <u ng-bind="data.inspQuest03"></u> psi
+        </td>
+        <td ng-bind="data.inspQuest03Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Pressure maintenance pump stop pressure <u ng-bind="data.inspQuest04"></u> psi
+        </td>
+        <td ng-bind="data.inspQuest04Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest05 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest05 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest05 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Pump house heating and ventilating louvers operated properly?
+        </td>
+        <td ng-bind="data.inspQuest05Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest06 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest06 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest06 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Pump suction, discharge and bypass valves open?
+        </td>
+        <td ng-bind="data.inspQuest06Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest07 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest07 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest07 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Normally closed valves are closed? (Test header, Venture meter)
+        </td>
+        <td ng-bind="data.inspQuest07Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest08 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest08 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest08 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Are all control valves sealed or supervised in their normal open or closed positions?
+        </td>
+        <td ng-bind="data.inspQuest08Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest09 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest09 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest09 === 'N/A'"></i>
+        </td>
+        <td>Q</td>
+        <td>
+          Did the supervisory alarms operate properly?
+        </td>
+        <td ng-bind="data.inspQuest09Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest10 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest10 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest10 === 'N/A'"></i>
+        </td>
+        <td>A</td>
+        <td>
+          Does the exterior condition of the piping, drain valves, check valves, hangers, pressure, guages and any other visible area of the fire pump appear to be in good condition?
+        </td>
+        <td ng-bind="data.inspQuest10Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest11 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest11 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest11 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Is the suction reservoir full?
+        </td>
+        <td ng-bind="data.inspQuest11Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest12 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest12 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest12 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Is the suction line pressure gauge reading within acceptable range?
+        </td>
+        <td ng-bind="data.inspQuest12Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest13 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest13 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest13 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Discharge line pressure gauge reading within acceptable range?
+        </td>
+        <td ng-bind="data.inspQuest13Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Suction pressure reading? (Pump not running) <u ng-bind="data.inspQuest14"></u> psi
+        </td>
+        <td ng-bind="data.inspQuest14Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Discharge pressure reading? (Pump not running) <u ng-bind="data.inspQuest15"></u> psi
+        </td>
+        <td ng-bind="data.inspQuest15Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Suction pressure reading? (Pump running) <u ng-bind="data.inspQuest16"></u> psi
+        </td>
+        <td ng-bind="data.inspQuest16Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest17 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest17 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest17 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Wet pit suction screens are unobstructed and in place?
+        </td>
+        <td ng-bind="data.inspQuest17Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest18 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest18 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest18 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Pump packing glands have a slight drip?
+        </td>
+        <td ng-bind="data.inspQuest18Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest19 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest19 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest19 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Check packing boxes, bearings or pump casing for overheating?
+        </td>
+        <td ng-bind="data.inspQuest19Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest20 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest20 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest20 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Circulation relief valve operating properly?
+        </td>
+        <td ng-bind="data.inspQuest20Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest21 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest21 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest21 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Pressure relief valve operating properly?
+        </td>
+        <td ng-bind="data.inspQuest21Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Observe time for engine to crank (seconds) <u ng-bind="data.inspQuest22"></u>
+        </td>
+        <td ng-bind="data.inspQuest22Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Observe time for motor to accelerate to full speed? (Seconds) <u ng-bind="data.inspQuest23"></u>
+        </td>
+        <td ng-bind="data.inspQuest23Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Record time the controller is on the 1st step? (For reduced voltage or reduced current starting) <u ng-bind="data.inspQuest24"></u> seconds
+        </td>
+        <td ng-bind="data.inspQuest24Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Record time pump runs after starting (Automatic stop controllers) <u ng-bind="data.inspQuest25"></u> seconds
+        </td>
+        <td ng-bind="data.inspQuest25Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Engine oil pressure while engine is running? <u ng-bind="data.inspQuest26"></u> psi
+        </td>
+        <td ng-bind="data.inspQuest26Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Speed indicator reading while engine is running? <u ng-bind="data.inspQuest27"></u> rpm
+        </td>
+        <td ng-bind="data.inspQuest27Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Water temperature while engine is running? <u ng-bind="data.inspQuest28"></u>
+        </td>
+        <td ng-bind="data.inspQuest28Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Oil temperature while engine is running? <u ng-bind="data.inspQuest29"></u>
+        </td>
+        <td ng-bind="data.inspQuest29Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest30 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest30 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest30 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          <span>Pump operated in churn condition for</span>
+          <span ng-if="data.pumpType === 'Diesel'">30</span>
+          <span ng-if="data.pumpType === 'Electric'">10</span>
+          <span>minutes?</span>
+        </td>
+        <td ng-bind="data.inspQuest30Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest31 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest31 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest31 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Controller "Power On" pilot light is iluminated?
+        </td>
+        <td ng-bind="data.inspQuest31Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest32 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest32 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest32 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Transfer switch normal pilot light is iluminated?
+        </td>
+        <td ng-bind="data.inspQuest32Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest33 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest33 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest33 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Isolation switch is closed?
+        </td>
+        <td ng-bind="data.inspQuest33Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest34 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest34 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest34 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Reverse phase alarm pilot light is off or normal and phase rotation pilot light is on?
+        </td>
+        <td ng-bind="data.inspQuest34Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest35 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest35 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest35 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Oil level in vertical motor sight glass is within acceptable range?
+        </td>
+        <td ng-bind="data.inspQuest35Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest36 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest36 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest36 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Power to jockey pump is provided?
+        </td>
+        <td ng-bind="data.inspQuest36Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest37 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest37 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest37 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Controller selector switch is in "Auto" position?
+        </td>
+        <td ng-bind="data.inspQuest37Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest38 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest38 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest38 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Battery voltage readings are within acceptable range?
+        </td>
+        <td ng-bind="data.inspQuest38Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest39 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest39 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest39 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Battery charging current readings are within acceptable range?
+        </td>
+        <td ng-bind="data.inspQuest39Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest40 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest40 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest40 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Battery pilot lights are on, or battery failure lights are off?
+        </td>
+        <td ng-bind="data.inspQuest40Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest41 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest41 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest41 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          All alarm pilot lights are off?
+        </td>
+        <td ng-bind="data.inspQuest41Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest42 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest42 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest42 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Electrolyte level in batteries is within acceptable range?
+        </td>
+        <td ng-bind="data.inspQuest42Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest43 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest43 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest43 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Battery terminals are free from corrosion?
+        </td>
+        <td ng-bind="data.inspQuest43Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest44 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest44 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest44 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Engine running time meter is operating?
+        </td>
+        <td ng-bind="data.inspQuest44Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest45 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest45 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest45 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Cooling water level is within acceptable range?
+        </td>
+        <td ng-bind="data.inspQuest45Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest46 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest46 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest46 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Water jacket heater is operating?
+        </td>
+        <td ng-bind="data.inspQuest46Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest47 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest47 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest47 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Fuel tank level is at least two-thirds full?
+        </td>
+        <td ng-bind="data.inspQuest47Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest48 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest48 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest48 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Fuel tank float switch is operational?
+        </td>
+        <td ng-bind="data.inspQuest48Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest49 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest49 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest49 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Fuel solenoid valve is operational?
+        </td>
+        <td ng-bind="data.inspQuest49Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest50 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest50 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest50 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Fuel flexible hoses and connectors are in good condition?
+        </td>
+        <td ng-bind="data.inspQuest50Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest51 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest51 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest51 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Oil level is withing acceptable range?
+        </td>
+        <td ng-bind="data.inspQuest51Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest52 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest52 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest52 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Cooling system has adequate water to heat exchanger?
+        </td>
+        <td ng-bind="data.inspQuest52Note"></td>
+      </tr>
+      <tr ng-if="data.pumpType === 'Diesel'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest53 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest53 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest53 === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-if="data.pumpType === 'Diesel'">W</span>
+          <span ng-if="data.pumpType === 'Electric'">M</span>
+        </td>
+        <td>
+          Mechanical features of cooling system ore in good condition and operate properly?
+        </td>
+        <td ng-bind="data.inspQuest53Note"></td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>

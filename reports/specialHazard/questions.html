@@ -1,0 +1,535 @@
+<section>
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Inspection Questions</th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          Yes
+        </th>
+        <th class="short-column">
+          No
+        </th>
+        <th class="short-column">
+          N/A
+        </th>
+        <th>
+        </th>
+        <th style="width:35%">
+          Notes
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest1 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest1 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest1 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Is the system interlocked with the building fire alarm?
+        </td>
+        <td ng-bind="data.inspecQuest1Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest2 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest2 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest2 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Has the system been discharged?
+        </td>
+        <td ng-bind="data.inspecQuest2Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest3 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest3 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest3 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Are all seals intact with no signs of tampering?
+        </td>
+        <td ng-bind="data.inspecQuest3Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest4 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest4 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest4 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Is the hazard properly covered with the correct nozzles?
+        </td>
+        <td ng-bind="data.inspecQuest4Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest5 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest5 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest5 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was positioning of the nozzles checked?
+        </td>
+        <td ng-bind="data.inspecQuest5Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest6 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest6 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest6 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Are pressure gauges in proper range?
+        </td>
+        <td ng-bind="data.inspecQuest6Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest7 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest7 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest7 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was pneumatic actuator checked?
+        </td>
+        <td ng-bind="data.inspecQuest7Note"></td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest8 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest8 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest8 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was system operated from terminal link?
+        </td>
+        <td ng-bind="data.inspecQuest8Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest30 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest30 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest30 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was travel of cable and link position checked?
+        </td>
+        <td ng-bind="data.inspecQuest30Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest9 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest9 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest9 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Were fusible links checked?
+        </td>
+        <td ng-bind="data.inspecQuest9Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest10 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest10 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest10 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was cartridge weight checked?
+        </td>
+        <td ng-bind="data.inspecQuest10Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest11 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest11 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest11 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was operation of manual release checked?
+        </td>
+        <td ng-bind="data.inspecQuest11Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest12 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest12 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest12 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was operation of time delay checked?
+        </td>
+        <td ng-bind="data.inspecQuest12Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest13 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest13 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest13 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was operation of Micro-switch checked?
+        </td>
+        <td ng-bind="data.inspecQuest13Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest14 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest14 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest14 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Did exhaust fan operate properly?
+        </td>
+        <td ng-bind="data.inspecQuest14Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest15 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest15 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest15 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Were filters in place?
+        </td>
+        <td ng-bind="data.inspecQuest15Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest16 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest16 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest16 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Are all penetrations sealed properly?
+        </td>
+        <td ng-bind="data.inspecQuest16Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest17 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest17 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest17 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Are manual and remote seats/seals in place?
+        </td>
+        <td ng-bind="data.inspecQuest17Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest18 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest18 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest18 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was operation of shutdown checked?
+        </td>
+        <td ng-bind="data.inspecQuest18Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest19 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest19 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest19 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was operation of fuel shutdown verified?
+        </td>
+        <td ng-bind="data.inspecQuest19Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest20 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest20 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest20 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Were the operation of all devices/detectors verified?
+        </td>
+        <td ng-bind="data.inspecQuest20Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest21 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest21 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest21 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was reserve power supply verified?
+        </td>
+        <td ng-bind="data.inspecQuest21Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest22 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest22 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest22 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Is piping/conduit securely bracketed?
+        </td>
+        <td ng-bind="data.inspecQuest22Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest23 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest23 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest23 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Were nozzles cleaned and proper caps / covers in place?
+        </td>
+        <td ng-bind="data.inspecQuest23Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest24 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest24 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest24 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Were safety pins removed?
+        </td>
+        <td ng-bind="data.inspecQuest24Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest25 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest25 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest25 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Is the system operational and armed?
+        </td>
+        <td ng-bind="data.inspecQuest25Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest26 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest26 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest26 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Are the proper fire extinguisers in place in the viinity?
+        </td>
+        <td ng-bind="data.inspecQuest26Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest27 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest27 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest27 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Are the fire extinguishers serviced with a compliant tag in place?
+        </td>
+        <td ng-bind="data.inspecQuest27Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest28 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest28 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest28 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Were personal instructed on the manual and automatic operation of the system?
+        </td>
+        <td ng-bind="data.inspecQuest28Note"></td>
+      </tr>
+      <tr>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest29 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest29 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest29 === 'N/A'"></i>
+        </td>
+
+        <td>
+          Was a service and certification tag left on the system?
+        </td>
+        <td ng-bind="data.inspecQuest29Note"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

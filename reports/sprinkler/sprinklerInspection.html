@@ -1,0 +1,337 @@
+<section>
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Fire Sprinkler System Inspection
+        </th>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <span>Yes</span>
+        </td>
+        <td class="short-column">
+          <span>No</span>
+        </td>
+        <td class="short-column">
+          <span>N/A</span>
+        </td>
+        <td class="short-column">
+          <span>Freq.</span>
+        </td>
+        <td>
+          <span></span>
+        </td>
+        <td style="width:35%">
+          <span>Notes</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest12 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest12 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest12 === 'N/A'"></i>
+        </td>
+        <td class="short-column">Q</td>
+        <td>
+          <span>Were all sprinkler systems in service upon arrival?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest12Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest13 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest13 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest13 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Are all of the sprinkler heads less than 50 years old?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest13Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest14 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest14 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest14 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Have the occupancy classification, machinery or operations remained the same since last inspection?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest14Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest15 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest15 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest15 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Has the sprinkler system remained free of changes or repairs since the last inspection</span>
+        </td>
+        <td><span ng-bind="data.inspQuest15Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest16 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest16 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest16 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Has the building been free of fire incident since the last inspection?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest16Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['M','Q','S','A','3','5']) && data.inspQuest16 === 'No'">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest17 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest17 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest17 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Have all damage sprinkler system components been replaced?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest17Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest18 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest18 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest18 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Have the sprinkler systems been extended to all visile areas of the building?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest18Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest19 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest19 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest19 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Does there appear to be 18 inches clearance between the top of the storage to the sprinkler deflectors?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest19Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest20 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest20 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest20 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Are the building areas that are protected by a wet system heated, including areas and perimeter areas?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest20Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest21 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest21 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest21 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Are all exterior openings protected against the entrance of cold air?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest21Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest22 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest22 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest22 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Have gauges been changed or calibrated in the last 5 years?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest22Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest23 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest23 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest23 === 'N/A'"></i>
+        </td>
+        <td class="short-column">Q</td>
+        <td>
+          <span>Are fire department connections visible and accessible?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest23Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest24 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest24 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest24 === 'N/A'"></i>
+        </td>
+        <td class="short-column">Q</td>
+        <td>
+          <span>Are fire department connections in good condition, with the couplings free, caps or plugs in place, and check valves tight?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest24Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest25 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest25 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest25 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Do sprinkler heads appear to be free of corrosion, paint, loading, or visible obstructions?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest25Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest26 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest26 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest26 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Are the minimum required extra sprinkler heads available on property?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest26Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest27 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest27 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest27 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Does the exterior condition of the piping, drain valves, check vales, hangers, pressure gauges and any other visible areas of the sprinkler system appear to be in good condition?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest27Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest28 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest28 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest28 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Is the alarm valve interior including strainers, filters, and restriction orifice in good condition?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest28Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest29 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest29 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest29 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Does the check valve move freely internally and appear to be in good condition?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest29Note"></span></td>
+      </tr>
+      <tr ng-show="validate(['5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspQuest30 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspQuest30 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspQuest30 === 'N/A'"></i>
+        </td>
+        <td class="short-column">A</td>
+        <td>
+          <span>Was an obstruction inspection performed?</span>
+        </td>
+        <td><span ng-bind="data.inspQuest30Note"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,91 @@
+<section>
+  <table class="table table-condensed  tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Auxiliary Equipment<small> — {{data.frequency}} testing frequency</small></th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          <span>Yes</span>
+        </th>
+        <th class="short-column">
+          <span>No</span>
+        </th>
+        <th class="short-column">
+          <span>N/A</span>
+        </th>
+        <th class="short-column">
+          <span>Freq.</span>
+        </th>
+        <th>
+          <span></span>
+        </th>
+        <th style="width: 33%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest32 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest32 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest32 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is a type K portable fire extinguisher present?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest32Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest33 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest33 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest33 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Is the fire extinguisher placarded as a backup extinguishment means?</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest33Note"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.inspecQuest34 === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.inspecQuest34 === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.inspecQuest34 === 'N/A'"></i>
+        </td>
+        <td class="short-column">
+          <span>S</span>
+        </td>
+        <td>
+          <span>Are personal instructed in the use of the fire extinguisher??</span>
+        </td>
+        <td>
+          <span ng-bind="data.inspecQuest34Note"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

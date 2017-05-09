@@ -1,0 +1,10 @@
+<section class="inspectorNotes">
+  <p ng-repeat="note in data.notes track by $index" class="text-justify">
+    <strong ng-if="$index === 0">Inspector Notes:</strong>
+    <span ng-bind="note" style="border-bottom: 1px solid #999;"/>
+  </p>
+  <p ng-if="!data.notes || data.notes.length === 0">
+    <strong>Inspector Notes: </strong>
+    <span>N/A</span>
+  </p>
+</section>

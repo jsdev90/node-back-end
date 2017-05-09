@@ -1,0 +1,80 @@
+<h5 class="text-center"><small>This grease cleaning report is in accordance with NFPA 96 version 2014.</small></h5>
+<section>
+  <table class="table  table-condensed tabla-rich">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Hood Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-top: 1px solid #999">
+          <strong>
+            Location:
+          </strong>
+          <span ng-bind="data.location"></span>
+        </td>
+        <td colspan="2" style="border-top: 1px solid #999">
+          <strong>
+            Manufacturer:
+          </strong>
+          <span ng-bind="data.make"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            Hood Type:
+          </strong>
+          <span ng-bind="data.hoodType !== 'Other' ? data.hoodType : data.hoodTypeOther"></span>
+        </td>
+        <td>
+          <strong>
+            Fan Type:
+          </strong>
+          <span ng-bind="data.fanType !== 'Other' ? data.fanType : data.fanTypeOther"></span>
+        </td>
+        <td>
+          <strong>
+            Fuel Type:
+          </strong>
+          <span ng-bind="data.fuelType"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            Cleaning Frequency:
+          </strong>
+          <span ng-bind="data.cleaningFreq !== 'Other' ? data.cleaningFreq : data.cleaningFreqOther"></span>
+        </td>
+        <td>
+          <strong>
+            Cooking Volume:
+          </strong>
+          <span ng-bind="data.cookingVolume"></span>
+        </td>
+        <td>
+          <strong>
+            Main Cooking Style:
+          </strong>
+          <span ng-bind="data.cookingStyle !== 'Other' ? data.cookingStyle : data.cookingStyleOther"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            Number of floors of system:
+          </strong>
+          <span ng-bind="data.high"></span>
+        </td>
+        <td colspan="2">
+          <strong>
+            Feet of horizontal duct:
+          </strong>
+          <span ng-bind="data.feet"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

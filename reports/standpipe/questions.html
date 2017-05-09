@@ -1,0 +1,479 @@
+<section>
+  <table class="table tabla-rich table-condensed blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Inspection Questions
+        </th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          <span>Yes</span>
+        </th>
+        <th class="short-column">
+          <span>No</span>
+        </th>
+        <th class="short-column">
+          <span>N/A</span>
+        </th>
+        <th class="short-column">
+          <span>Freq.</span>
+        </th>
+        <th></th>
+        <th style="width:35%">
+          <span>Notes</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-if="validate(['M','Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.valvesPosition === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.valvesPosition === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.valvesPosition === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are the control valves in the correct open or closed position?</span>
+        </td>
+
+        <td ng-bind="data.valvesPositionNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['M','Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.valvesSealed === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.valvesSealed === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.valvesSealed === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are the control valves sealed, locked or supervised?</span>
+        </td>
+
+        <td ng-bind="data.valvesSealedNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['M','Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.valvesAccesible === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.valvesAccesible === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.valvesAccesible === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are all control valves accessible?</span>
+        </td>
+
+        <td ng-bind="data.valvesAccesibleNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['M','Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.valvesFreeFromDamage === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.valvesFreeFromDamage === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.valvesFreeFromDamage === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are control valves free from damage or leaks?</span>
+        </td>
+
+        <td ng-bind="data.valvesFreeFromDamageNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['M','Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.valvesSignage === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.valvesSignage === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.valvesSignage === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Do all control valves have proper signage?</span>
+        </td>
+
+        <td ng-bind="data.valvesSignageNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.alarmDevicesDamage === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.alarmDevicesDamage === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.alarmDevicesDamage === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are all alarm devices free of damage?</span>
+        </td>
+
+        <td ng-bind="data.alarmDevicesDamageNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.connectionsVisible === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.connectionsVisible === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.connectionsVisible === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are fire department conections visible and accesible?</span>
+        </td>
+
+        <td ng-bind="data.connectionsVisibleNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.connectionsCouplings === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.connectionsCouplings === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.connectionsCouplings === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Do fire department connection couplings swivel and operate correctly?</span>
+        </td>
+
+        <td ng-bind="data.connectionsCouplingsNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.fireConnectionsDamage === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.fireConnectionsDamage === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.fireConnectionsDamage === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are the fire department connection plug or caps in place and gaskets free from damage?</span>
+        </td>
+
+        <td ng-bind="data.fireConnectionsDamageNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.fireDepartmentSigns === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.fireDepartmentSigns === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.fireDepartmentSigns === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are the fire department connection signs in place?</span>
+        </td>
+
+        <td ng-bind="data.fireDepartmentSignsNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.fireDepartmentLeaks === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.fireDepartmentLeaks === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.fireDepartmentLeaks === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Is the fire deparment connection check valve free from leaks?</span>
+        </td>
+
+        <td ng-bind="data.fireDepartmentLeaksNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.hoseConnectionsAccesible === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.hoseConnectionsAccesible === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.hoseConnectionsAccesible === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are fire department hose connections accesible, free from leaks and the valve and cap in place and in good condition?</span>
+        </td>
+
+        <td ng-bind="data.hoseConnectionsAccesibleNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.regulatingDevicesDamage === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.regulatingDevicesDamage === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.regulatingDevicesDamage === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are the pressure regulating devices or hoses connections free of damage or leaks?</span>
+        </td>
+
+        <td ng-bind="data.regulatingDevicesDamageNote"></td>
+
+      </tr>
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.hoseThreadsDamage === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.hoseThreadsDamage === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.hoseThreadsDamage === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A</td>
+
+        <td>
+          <span>Are the pressure regulating devices or hose connections hose threads free of damage?</span>
+        </td>
+
+        <td ng-bind="data.hoseThreadsDamageNote"></td>
+
+      </tr>
+
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.reducerCapIntact === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.reducerCapIntact === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.reducerCapIntact === 'N/A'"></i>
+        </td>
+        <td></td>
+        <td>
+          <span>Are the pressure regulating devices or hose connections reducer and cap intact?</span>
+        </td>
+        <td ng-bind="data.reducerCapIntactNote"></td>
+      </tr>
+
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.handWheelInPlace === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.handWheelInPlace === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.handWheelInPlace === 'N/A'"></i>
+        </td>
+        <td></td>
+        <td>
+          <span>Are the pressure regulating devices or hose connections hand wheel in place?</span>
+        </td>
+        <td ng-bind="data.handWheelInPlaceNote"></td>
+      </tr>
+
+      <tr ng-if="validate(['Q','S','A','3','5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.pipingDamage === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.pipingDamage === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.pipingDamage === 'N/A'"></i>
+        </td>
+        <td></td>
+        <td>
+          <span>Is all piping free of damage and leaks and is the bracing in place?</span>
+        </td>
+        <td ng-bind="data.pipingDamageNote"></td>
+      </tr>
+
+      <tr ng-if="validate(['5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.gaugesCalibrated === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.gaugesCalibrated === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.gaugesCalibrated === 'N/A'"></i>
+        </td>
+        <td></td>
+        <td>
+          <span>Were all gauges calibrated or replaced?</span>
+        </td>
+        <td ng-bind="data.gaugesCalibratedNote"></td>
+      </tr>
+
+      <tr ng-if="validate(['5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.masterPressureTested === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.masterPressureTested === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.masterPressureTested === 'N/A'"></i>
+        </td>
+        <td></td>
+        <td>
+          <span>Was the master pressure reducing valve flow tested?</span>
+        </td>
+        <td ng-bind="data.masterPressureTestedNote"></td>
+      </tr>
+
+      <tr ng-if="validate(['5'])">
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.hoseValvesFlowTest === 'Yes'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.hoseValvesFlowTest === 'No'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.hoseValvesFlowTest === 'N/A'"></i>
+        </td>
+        <td></td>
+        <td>
+          <span>Hose valves flow test? (non pressure reducing)</span>
+        </td>
+        <td ng-bind="data.hoseValvesFlowTestNote"></td>
+      </tr>
+
+      <tr ng-if="validate(['5'])">
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-check" style="color: green" ng-if="data.connectionPressureTest === 'Yes'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-close" style="color: red" ng-if="data.connectionPressureTest === 'No'"></i>
+        </td>
+
+        <td class="short-column">
+          <i class="fa fa-fw fa-2x text-center fa-minus" ng-if="data.connectionPressureTest === 'N/A'"></i>
+        </td>
+
+        <td class="short-column">A/5</td>
+
+        <td>
+          <span>Hose connection pressure reducing valve flow test?</span>
+        </td>
+
+        <td ng-bind="data.connectionPressureTestNote"></td>
+
+      </tr>
+    </tbody>
+  </table>
+</section>

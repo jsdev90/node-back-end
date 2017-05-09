@@ -1,0 +1,70 @@
+<section>
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          <span><br>Exit Sign / Emergency Lights</span>
+          <small> — Annual inspection frequency</small>
+        </th>
+      </tr>
+      <tr>
+        <th class="text-center" style="width: 35%">
+          Location
+        </th>
+        <th class="text-center short-column">
+          Exit Sign
+        </th>
+        <th class="text-center short-column">
+          Emergency Light
+        </th>
+        <th class="text-center short-column">
+          Combo Unit
+        </th>
+        <th class="text-center short-column">
+          Service Performed
+        </th>
+        <th class="text-center">
+          Fully functional / Needs Repair/Replaced
+        </th>
+        <th class="text-center" style="width: 28%">
+          Notes / Parts Used
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="info in data.devices">
+        <td>
+          <span ng-bind="info.location"></span>
+        </td>
+        <td>
+          <i class="fa fa-fw fa-check" style="color: green"  ng-if="info.type === 'Exit Sign'"></i>
+        </td>
+        <td>
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="info.type === 'Emergency Light'"></i>
+        </td>
+        <td>
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="info.type === 'Combo Unit'"></i>
+        </td>
+        <td>
+          <span ng-bind="info.service"></span>
+        </td>
+        <td>
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="info.status === 'Pass'"></i>
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="info.status === 'Fail'"></i>
+        </td>
+        <td>
+          <span ng-bind="info.statusNote"/>
+        </td>
+      </tr>
+      <tr ng-repeat="empty in padding">
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,35 @@
+<section>
+  <table class="table  table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">Devices</th>
+      </tr>
+      <tr>
+        <th class="short-column"><span>Pass</span></th>
+        <th class="short-column"><span>Fail</span></th>
+        <th class="short-column"><span>Freq.</span></th>
+        <th style="width:25%;"><span>Location</span></th>
+        <th class="short-column"><span>Device type</span></th>
+        <th class="short-column"><span>Make</span></th>
+        <th class="short-column"><span>Model</span></th>
+        <th style="width:35%"><span>Notes</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="device in data.devices">
+        <td>
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="device.status === 'Pass'"></i>
+        </td>
+        <td>
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="device.status === 'Fail'"></i>
+        </td>
+        <td><span ng-bind="'S '+device.freq"></span></td>
+        <td><span ng-bind="device.location"></span></td>
+        <td><span ng-bind="device.type"></span></td>
+        <td><span ng-bind="device.make"></span></td>
+        <td><span ng-bind="device.model"></span></td>
+        <td><span ng-bind="device.statusNote"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

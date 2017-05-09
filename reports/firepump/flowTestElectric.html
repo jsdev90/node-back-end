@@ -1,0 +1,341 @@
+<section id="flow-test-section">
+  <table class="table table-condensed tabla-rich min-margin table-separator blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10"></th>
+      </tr>
+      <tr>
+        <td colspan="10">
+          <strong style="font-size: 14px">{{data.frequency}} Flow Test<small> — {{data.frequency}} testing frequency</small></strong>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="7" style="width: 17%">Churn (0%)</th>
+        <th>Flow GPM</th>
+        <th>Suction PSI</th>
+        <th>Discharge PSI</th>
+        <th>Net Pressure PSI</th>
+        <th>Speed RPM</th>
+      </tr>
+      <tr>
+        <td ng-bind="data.flowTestArr.churn[0].gpm"></td>
+        <td ng-bind="data.flowTestArr.churn[0].suctionPSI"></td>
+        <td ng-bind="data.flowTestArr.churn[0].dischargePSI"></td>
+        <td ng-bind="data.flowTestArr.churn[0].netPressurePSI"></td>
+        <td ng-bind="data.flowTestArr.churn[0].speedRPM"></td>
+      </tr>
+      <tr>
+        <th>Phase</th>
+        <th>Volts</th>
+        <th>Amps</th>
+        <th>V x A</th>
+        <th>Rated V x FLA x SF</th>
+      </tr>
+      <tr>
+        <td>A-B</td>
+        <td ng-bind="data.flowTestArr.churn[0].abVolts"></td>
+        <td ng-bind="data.flowTestArr.churn[0].abAmps"></td>
+        <td ng-bind="data.flowTestArr.churn[0].abvxa"></td>
+        <td ng-bind="data.flowTestArr.churn[0].abvxflaxsf"></td>
+      </tr>
+      <tr>
+        <td>B-C</td>
+        <td ng-bind="data.flowTestArr.churn[0].bcVolts"></td>
+        <td ng-bind="data.flowTestArr.churn[0].bcAmps"></td>
+        <td ng-bind="data.flowTestArr.churn[0].bcvxa"></td>
+        <td ng-bind="data.flowTestArr.churn[0].bcvxflaxsf"></td>
+      </tr>
+      <tr>
+        <td>C-A</td>
+        <td ng-bind="data.flowTestArr.churn[0].caVolts"></td>
+        <td ng-bind="data.flowTestArr.churn[0].caAmps"></td>
+        <td ng-bind="data.flowTestArr.churn[0].cavxa"></td>
+        <td ng-bind="data.flowTestArr.churn[0].cavxflaxsf"></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          V x A acceptable?
+          <input type="checkbox" ng-checked="data.flowTestArr.churn[0].vxaAccept === 'Yes' ? true : false">
+          <label>
+            <span></span>
+            Yes
+          </label>
+          <input type="checkbox" ng-checked="data.flowTestArr.churn[0].vxaAccept === 'No' ? true : false">
+          <label>
+            <span></span>
+            No
+          </label>
+        </td>
+        <td colspan="2">
+          Voltage acceptable?
+          <input type="checkbox" ng-checked="data.flowTestArr.churn[0].voltAccept === 'Yes' ? true : false">
+          <label>
+            <span></span>
+            Yes
+          </label>
+          <input type="checkbox" ng-checked="data.flowTestArr.churn[0].voltAccept === 'No' ? true : false">
+          <label>
+            <span></span>
+            No
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-condensed tabla-rich min-margin table-separator">
+    <tbody>
+      <tr>
+        <th rowspan="7" style="width: 17%">100% Rated Flow</th>
+        <th style="width:8%">Nozzle #</th>
+        <th>Size</th>
+        <th>Pilot Pressure</th>
+        <th>Flow GPM</th>
+        <th>Suction PSI</th>
+        <th>Discharge PSI</th>
+        <th>Net Pressure PSI</th>
+        <th>Phase</th>
+        <th>Volts</th>
+        <th>Amps</th>
+        <th style="width:6%">V x A</th>
+        <th>Rated V x FLA x SF</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td ng-bind="data.flowTestArr.rated100[0].size"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].gpm"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].suctionPSI"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].dischargePSI"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].netPressurePSI"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].phase"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].volts"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].amps"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].vxa"></td>
+        <td ng-bind="data.flowTestArr.rated100[0].vxflaxsf"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td ng-bind="data.flowTestArr.rated100[1].size"></td>
+        <td ng-bind="data.flowTestArr.rated100[1].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated100[1].gpm"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td ng-bind="data.flowTestArr.rated100[2].size"></td>
+        <td ng-bind="data.flowTestArr.rated100[2].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated100[2].gpm"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td ng-bind="data.flowTestArr.rated100[3].size"></td>
+        <td ng-bind="data.flowTestArr.rated100[3].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated100[3].gpm"></td>
+        <td></td>
+        <td></td>
+        <td colspan="6" rowspan="4" class="text-left" style="vertical-align:middle">
+          <div>
+            V x A acceptable?
+            <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].vxaAccept === 'Yes' ? true : false">
+            <label>
+              <span></span>
+              Yes
+            </label>
+            <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].vxaAccept === 'No' ? true : false">
+            <label>
+              <span></span>
+              No
+            </label>
+          </div>
+          <div>
+            Voltage acceptable?
+            <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].voltAccept === 'Yes' ? true : false">
+            <label>
+              <span></span>
+              Yes
+            </label>
+            <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].voltAccept === 'No' ? true : false">
+            <label>
+              <span></span>
+              No
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td ng-bind="data.flowTestArr.rated100[4].size"></td>
+        <td ng-bind="data.flowTestArr.rated100[4].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated100[4].gpm"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td ng-bind="data.flowTestArr.rated100[5].size"></td>
+        <td ng-bind="data.flowTestArr.rated100[5].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated100[5].gpm"></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-condensed tabla-rich min-margin table-separator">
+    <tbody>
+      <tr>
+        <th rowspan="8" style="width: 17%">150% Rated Flow</th>
+        <th style="width:8%">Nozzle #</th>
+        <th>Size</th>
+        <th>Pilot Pressure</th>
+        <th>Flow GPM</th>
+        <th>Suction PSI</th>
+        <th>Discharge PSI</th>
+        <th>Net Pressure PSI</th>
+        <th>Phase</th>
+        <th>Volts</th>
+        <th>Amps</th>
+        <th style="width:6%">V x A</th>
+        <th>Rated V x FLA x SF</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td ng-bind="data.flowTestArr.rated150[0].size"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].gpm"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].suctionPSI"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].dischargePSI"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].netPressurePSI"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].phase"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].volts"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].amps"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].vxa"></td>
+        <td ng-bind="data.flowTestArr.rated150[0].vxflaxsf"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td ng-bind="data.flowTestArr.rated150[1].size"></td>
+        <td ng-bind="data.flowTestArr.rated150[1].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated150[1].gpm"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td ng-bind="data.flowTestArr.rated150[2].size"></td>
+        <td ng-bind="data.flowTestArr.rated150[2].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated150[2].gpm"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td ng-bind="data.flowTestArr.rated150[3].size"></td>
+        <td ng-bind="data.flowTestArr.rated150[3].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated150[3].gpm"></td>
+        <td></td>
+        <td></td>
+        <td colspan="6" class="text-left">
+          V x A acceptable?
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].vxaAccept === 'Yes' ? true : false">
+          <label>
+            <span></span>
+            Yes
+          </label>
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].vxaAccept === 'No' ? true : false">
+          <label>
+            <span></span>
+            No
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td ng-bind="data.flowTestArr.rated150[4].size"></td>
+        <td ng-bind="data.flowTestArr.rated150[4].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated150[4].gpm"></td>
+        <td></td>
+        <td></td>
+        <td colspan="6" class="text-left">
+          <div>
+            Voltage acceptable?
+            <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].voltAccept === 'Yes' ? true : false">
+            <label>
+              <span></span>
+              Yes
+            </label>
+            <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].voltAccept === 'No' ? true : false">
+            <label>
+              <span></span>
+              No
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td ng-bind="data.flowTestArr.rated150[5].size"></td>
+        <td ng-bind="data.flowTestArr.rated150[5].pilotPressure"></td>
+        <td ng-bind="data.flowTestArr.rated150[5].gpm"></td>
+        <td></td>
+        <td></td>
+        <td colspan="6" class="text-left">
+          Suction pressure at %150 of rated flow at least 0 psi?
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].suctionPressureAt150 === 'Yes' ? true : false">
+          <label>
+            <span></span>
+            Yes
+          </label>
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].suctionPressureAt150 === 'No' ? true : false">
+          <label>
+            <span></span>
+            No
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="12" class="text-left">
+          For pump system installed per NFPA 20, using suction tanks where NFPA 20 permitted the suction pressure to be not less than 3 psi, is the suction pressure at least 3 psi?
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].isSuction3PSI === 'Yes' ? true : false">
+          <label>
+            <span></span>
+            Yes
+          </label>
+          <input type="checkbox" ng-checked="data.flowTestArr.rated150[0].isSuction3PSI === 'No' ? true : false">
+          <label>
+            <span></span>
+            No
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

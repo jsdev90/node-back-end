@@ -1,0 +1,217 @@
+<section>
+  <table class="table tabla-rich table-condensed blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          <span>Monitoring Panel</span>
+          <small>— Annual inspection frequency</small>
+        </th>
+      </tr>
+      <tr>
+        <th class="short-column">
+          <span>
+            Pass
+          </span>
+        </th>
+        <th class="short-column">
+          <span>
+            Fail
+          </span>
+        </th>
+        <th class="short-column">
+          <span>
+            N/A
+          </span>
+        </th>
+        <th>
+          <span>
+            &nbsp;
+          </span>
+        </th>
+        <th style="width: 35%">
+          <span>
+            Notes
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="data.panelInspection === 'Pass'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="data.panelInspection === 'Fail'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-minus" ng-if="data.panelInspection === 'N/A'"></i>
+        </td>
+        <td>
+          <span>
+            Monitoring Panel?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.panelInspectionNote"></span>
+        </td>
+      </td>
+      </td>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="data.panelLampTest === 'Pass'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="data.panelLampTest === 'Fail'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-minus" ng-if="data.panelLampTest === 'N/A'"></i>
+        </td>
+        <td>
+          <span>
+            Monitoring Panel lamp test?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.panelLampTestNote"></span>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="data.panelChargingCircuit === 'Pass'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="data.panelChargingCircuit === 'Fail'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-minus" ng-if="data.panelChargingCircuit === 'N/A'"></i>
+        </td>
+        <td>
+          <span>
+            Monitoring Panel charging circuit?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.panelChargingCircuitNote"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="data.panelSignalsReceived === 'Pass'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="data.panelSignalsReceived === 'Fail'"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-minus" ng-if="data.panelSignalsReceived === 'N/A'"></i>
+        </td>
+        <td>
+          <span>
+            Were all Monitoring Panel signals received?
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.panelSignalsReceivedNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td class="short-column">
+          <i class="fa fa-fw fa-minus"></i>
+        </td>
+        <td>
+          <span>
+            <span>What was the elapsed time time it took monitoring company to receive an initial signal?</span>
+            <u ng-bind="data.panelTimeToSignal"></u>
+            <span>seconds</span>
+          </span>
+        </td>
+        <td>
+          <span ng-bind="panelTimeToSignalNote"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section>
+  <div class="header">Batteries <small> — Annual testing frequency</small></div>
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr>
+        <th class="text-center" style="width: 50%">
+          <span>
+            Description
+          </span>
+        </th>
+        <th class="text-center">
+          <span>
+            Notes
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span>
+            Monitoring panel battery <u ng-bind="data.panelBatteryVolts"></u> volts <u ng-bind="data.panelBatteryAmps"></u> amps
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.panelBatteryAmpsNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Monitoring panel battery quantity <u ng-bind="data.panelBatteryAmount"></u>
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.panelBatteryAmountNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Monitoring panel batter voltage with power on <u ng-bind="data.panelBatteryPowerOn"></u>
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.panelBatteryPowerOnNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Monitoring panel batter voltage with power off and under load <u ng-bind="data.panelBatteryPowerOff"></u>
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.panelBatteryPowerOffNote"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Did batteries maintain proper voltage during 5 minute load test? <u ng-bind="data.properVoltDuring5min"></u>
+          </span>
+        </td>
+        <td>
+          <span ng-bind="data.properVoltDuring5minNote"></span>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</section>

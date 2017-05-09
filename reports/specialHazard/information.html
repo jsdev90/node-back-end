@@ -1,0 +1,36 @@
+<ng-include src="'/static/common/monitoring.html'"></ng-include>
+<section>
+  <div class="header">
+    <br>System Information
+  </div>
+  <table class="table  table-condensed tabla-rich">
+    <tbody>
+      <tr>
+        <td colspan="2" style="border-top: 1px solid #999">
+          <strong>Location of monitoring panel: </strong>
+          <span ng-bind="data.location"></span>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%">
+          <strong>Manufacturer: </strong>
+          <span ng-bind="data.make"></span>
+        </td>
+        <td>
+          <strong>Model: </strong>
+          <span ng-bind="data.model"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+           <strong>Is system UL 300 compliant?</strong>
+           <span ng-bind="data.ul300"></span>
+        </td>
+        <td>
+          <strong>Testing frequency?</strong>
+          <span ng-bind="data.frequency !== 'Other' ? data.frequency : data.frequencyOther"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

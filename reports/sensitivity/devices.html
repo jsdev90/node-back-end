@@ -1,0 +1,72 @@
+<section>
+  <table class="table table-condensed tabla-rich blue-headers">
+    <thead>
+      <tr class="table-header">
+        <th colspan="10">
+          Sensitivity readings<small> — {{data.frequency}} testing frequency</small>
+        </th>
+      </tr>
+      <tr>
+        <td class="short-column">
+          <span>Pass</span>
+        </td>
+        <td class="short-column">
+          <span>Fail</span>
+        </td>
+        <td class="" style="width: 45%">
+          <span>Location / ID #</span>
+        </td>
+        <td style="width: 12%;">
+          <span>Make</span>
+        </td>
+        <td style="width: 12%;">
+          <span>Model</span>
+        </td>
+        <td style="width: 12%;">
+          <span>Listed Range</span>
+        </td>
+        <td style="width: 12%;">
+          <span>Today's Reading</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="device in data.devices track by $index">
+        <td>
+          <i class="fa fa-fw fa-check" style="color: green" ng-if="device.status === 'Pass'"></i>
+          <i class="fa fa-fw fa-minus" ng-if="device.status === 'N/A'"></i>
+        </td>
+        <td>
+          <i class="fa fa-fw fa-close" style="color: red" ng-if="device.status === 'Fail'"></i>
+          <i class="fa fa-fw fa-minus" ng-if="device.status === 'N/A'"></i>
+        </td>
+        <td>
+          <span ng-bind="($index + 1) + '. ' + device.location"></span>
+          <span> / </span>
+          <span>{{device.smokeDetectID}}</span>
+        </td>
+        <td>
+          <span ng-bind="device.make"></span>
+        </td>
+        <td>
+          <span ng-bind="device.model"></span>
+        </td>
+        <td>
+          <span>{{device.manufacRangeMin}}</span>
+          <span> — </span>
+          <span>{{device.manufacRangeMax}}</span>
+        </td>
+        <td><span>{{device.todayReading}}</span></td>
+      </tr>
+      <tr ng-repeat="empty in padding">
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+        <td><span>&nbsp;</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
